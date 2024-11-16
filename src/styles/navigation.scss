@@ -1,0 +1,202 @@
+// Загальні налаштування
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  // Змінні
+  $nav-bg-color: #ffffff;
+  $primary-color: #285db7;
+  $nav-padding: 5px 10px;
+  $icon-size: 26px;
+  $text-size: 16px;
+  $border-radius: 10px;
+  
+  // Стилі контейнера навігації
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: $border-radius;
+    margin-left: 10px;
+  
+    // Секції головної і обраної навігації
+    .main,
+    .chosen {
+      background-color: $nav-bg-color;
+      border-radius: $border-radius;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+      padding: $nav-padding;
+  
+      .fa-calendar-check {
+        margin-left: 4px; // Налаштування позиції іконки
+      }
+    }
+  
+    // Контейнер сторінок вибраного проекту
+    .page-container {
+      background-color: $nav-bg-color;
+    }
+  .input-option {
+    margin-right: 15px;
+  }
+    // Блок окремого вибраного проекту
+    .chosen-page {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $nav-bg-color;
+      border-radius: $border-radius;
+      padding: $nav-padding;
+      position: relative;
+    }
+  
+    // Вікно вибору проекту
+    .project-window {
+      background-color: #2e2f4b;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      border-radius: $border-radius;
+      padding: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      color: white;
+
+      .container-search-workspace{
+        // background-color: red;
+        height: 40px;
+        width: 100%;
+        border: 2px solid grey;
+        border-radius: 10px;
+display: flex;
+justify-content: left;
+align-items: center;
+padding:0 20px;
+        .input-workspace{
+            background: none;
+            border: none;
+margin-left: 15px;
+width: 100%;
+
+&::after{
+    outline: none;
+}
+&::placeholder{
+    font-size: 18px;
+}
+        }
+      }
+.catalogue{
+    margin-top: 10px;
+}
+      .list-all-project{
+        // background-color: red;
+        margin-top: 10px;
+      }
+h1{
+    font-size: 24px;
+}
+    }
+  
+    // Вхідний блок поточного проекту
+    .current-project {
+      background: none;
+      border: none;
+      font-size: $text-size;
+    }
+  
+    // Фонова область
+    .list {
+      background-image: linear-gradient(to bottom, $nav-bg-color 10%, #ecf0fa);
+      height: 100%;
+      padding: 5px 20px;
+    }
+  }
+  
+  // Контейнер пошуку
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $nav-bg-color;
+    padding: 5px 20px;
+    border-radius: $border-radius;
+  
+    // Поле пошуку
+    .search {
+      display: flex;
+      align-items: center;
+      border: 2px solid grey;
+      border-radius: 5px;
+      flex-grow: 1;
+      height: 40px;
+  
+      // Вхідне поле пошуку
+      .input-search {
+        width: 100%;
+        border: none;
+        background: none;
+        font-size: $text-size;
+        padding: 5px;
+  
+        &::placeholder {
+          font-size: $text-size;
+        }
+  
+        &:focus {
+          outline: none;
+          border-bottom: 2px solid $primary-color;
+        }
+      }
+    }
+  
+    // Кнопка додавання проекту
+    .btn-submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $primary-color;
+      font-size: $icon-size;
+      border-radius: 5px;
+      border: none;
+      padding: 0 10px;
+      margin-left: 10px;
+      cursor: pointer;
+      height: 40px;
+  
+      .fa-plus {
+        color: white;
+      }
+    }
+  }
+  
+  // Стилі кнопки навігації
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: $nav-padding;
+    cursor: pointer;
+  }
+  
+  // Стилі іконки в кнопці навігації
+  .icon-nav {
+    font-size: $icon-size;
+    margin-right: 10px;
+  }
+  
+  // Текст у кнопці навігації
+  .nav-text {
+    font-size: $text-size;
+  }
+  

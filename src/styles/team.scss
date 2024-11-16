@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+  .survey {
+    background-color: #f3f3f3;
+    position: relative;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0 0 150px;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      width: 80%;
+
+      .fa-lemon {
+        font-size: 24px;
+        margin-right: 15px;
+      }
+    }
+
+    .variant {
+      width: 90%;
+      margin-top: 10vh;
+      border: none;
+      .legend {
+        font-size: 2.25rem; // краще використовувати rem для адаптивності
+        font-weight: 700;
+        margin-bottom: 50px;
+      }
+
+      .checkbox-option {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 2vh;
+
+        .team {
+          display: flex;
+          align-items: center;
+          // justify-content: space-between;
+          width: 100%;
+          border-radius: 1vh;
+          margin: 1rem 0 0 0;
+          padding: 0;
+          border: 2px solid #cdccd0;
+            .email-adress {
+              margin-left: 15px;
+              font-size: 1.5rem;
+              background: none;
+              border: none;
+              width: 100%;
+              &::placeholder {
+                font-size: 1.75rem;
+                font-weight: 500;
+              }
+              &:focus {
+                outline: none;
+              }
+            }
+          
+
+          .role-container {
+            height: 8vh;
+            border-left: 2px solid #cdccd0;
+            display: flex;
+            align-items: center;
+
+            .input-option {
+              display: flex;
+              align-items: center;
+              text-align: center;
+              font-size: 1.75rem;
+              font-weight: 600;
+              padding: 15px;
+              cursor: pointer;
+              margin-left: 1rem;
+              
+              .fa-solid {
+                margin-left: 1rem;
+                width: 3rem;
+                height: 3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 1rem;
+                &:hover {
+                  background: #e0e0e0;
+                }
+              }
+            }
+
+            .popup-window {
+              background-color: white;
+              position: absolute;
+              display: flex;
+              flex-direction: column;
+              border-radius: 10px;
+              width: 40%;
+              box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+              margin-top: 32vh;
+              overflow: hidden;
+              z-index: 1;
+              button {
+                background: white;
+                border: none;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 10px;
+                text-align: left;
+                transition: background-color 0.3s;
+
+                h1 {
+                  font-weight: 500;
+                  font-size: 1.75rem;
+                }
+
+                p {
+                  font-size: 1.5rem;
+                  color: #646366;
+                }
+
+                &:hover {
+                  background: #cde7ff;
+                }
+              }
+            }
+          }
+          .remove-button {
+            width: 4rem;
+            height: 4.5rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            position: absolute;
+            right: 2rem;
+            border-radius: 1rem;
+            color: #d2d0d0;
+            &:hover {
+              background: #e0e0e0;
+              color: black;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .btn-add {
+        width: 40%;
+        height: 7vh;
+        border: none;
+        border-radius: 10px;
+        background: rgb(216, 216, 216);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 1.5rem;
+        margin-top: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #e0e0e0;
+        }
+      }
+
+      .button-container {
+        position: relative;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        margin-top: 5rem;
+
+        .btn-later,
+        .btn-invite {
+          font-size: 1.625rem;
+          padding: 10px 15px;
+          border-radius: 5px;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: #e6e6e6;
+          }
+        }
+
+        .btn-later {
+          background-color: #dcdcdc;
+          color: black;
+        }
+
+        .btn-invite {
+          background-color: #dad9db;
+          color: #88888a;
+        }
+      }
+    }
+  }
+
+  .team-photo {
+    width: 750px;
+    height: 100%;
+    background-image: url("../image/second-page-bg.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+}

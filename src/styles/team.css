@@ -1,0 +1,176 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.container .survey {
+  background-color: #f3f3f3;
+  position: relative;
+  width: 100%;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 0 150px;
+}
+.container .survey .logo {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+.container .survey .logo .fa-lemon {
+  font-size: 24px;
+  margin-right: 15px;
+}
+.container .survey .variant {
+  width: 90%;
+  margin-top: 15vh;
+}
+.container .survey .variant .legend {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.container .survey .variant .checkbox-option {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  margin-top: 2vh;
+}
+.container .survey .variant .checkbox-option .team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 1vh;
+  margin: 0;
+  padding: 0;
+}
+.container .survey .variant .checkbox-option .team .custom-email-adress {
+  display: flex;
+  width: 100%;
+  height: 8vh;
+  border: 2px solid #cdccd0;
+}
+.container .survey .variant .checkbox-option .team .custom-email-adress .email-adress {
+  margin-left: 15px;
+  font-size: 24px;
+  background: none;
+  border: none;
+}
+.container .survey .variant .checkbox-option .team .custom-email-adress .email-adress:focus {
+  outline: none; /* Вимикає стандартний обведений фокус */
+  border: none;
+}
+.container .survey .variant .checkbox-option .team .custom-email-adress .email-adress::-moz-placeholder {
+  font-size: 28px;
+  font-weight: 500;
+}
+.container .survey .variant .checkbox-option .team .custom-email-adress .email-adress::placeholder {
+  font-size: 28px;
+  font-weight: 500;
+}
+.container .survey .variant .checkbox-option .team .role-container {
+  height: 8vh;
+  border-top: 2px solid #cdccd0; /* Верхній бордер */
+  border-right: 2px solid #cdccd0; /* Лівий бордер */
+  border-bottom: 2px solid #cdccd0;
+  display: flex;
+}
+.container .survey .variant .checkbox-option .team .role-container .input-option {
+  border: none;
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 600;
+  padding: 15px;
+}
+.container .survey .variant .checkbox-option .team .role-container .input-option .fa-solid {
+  margin-left: 20px;
+  cursor: pointer;
+}
+.container .survey .variant .checkbox-option .team .role-container .popup-window {
+  background-color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 40%;
+  box-shadow: 0px 4px 8px grey; /* Тінь знизу */
+  margin-top: 8vh;
+}
+.container .survey .variant .checkbox-option .team .role-container .popup-window button {
+  text-align: left;
+  background: white;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.container .survey .variant .checkbox-option .team .role-container .popup-window button h1 {
+  font-weight: 500;
+  font-size: 28px;
+}
+.container .survey .variant .checkbox-option .team .role-container .popup-window button p {
+  font-size: 24px;
+  color: #646366;
+}
+.container .survey .variant .checkbox-option .team .role-container .popup-window button:hover {
+  background: #cde7ff;
+}
+.container .survey .variant .btn-add {
+  width: 40%;
+  height: 7vh;
+  border: none;
+  border-radius: 10px;
+  background: rgb(216, 216, 216);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 24px;
+  margin-top: 15px;
+}
+.container .survey .variant .btn-container .btn-later {
+  position: absolute;
+  bottom: 15vh;
+  right: 78vh;
+  width: 250px;
+  font-size: 26px;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #dcdcdc;
+  color: black;
+}
+.container .survey .variant .btn-container .btn-later:hover {
+  background: none;
+  cursor: pointer;
+}
+.container .survey .variant .btn-container .btn-invite {
+  position: absolute;
+  bottom: 15vh;
+  right: 25vh;
+  width: 200px;
+  font-size: 26px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #dad9db;
+  color: #88888a;
+}
+.container .survey .variant .btn-container .btn-invite:hover {
+  background: none;
+  cursor: pointer;
+}
+.container .team-photo {
+  width: 750px;
+  height: 100%;
+  background-image: url("../image/second-page-bg.jpeg");
+  background-size: contain;
+}/*# sourceMappingURL=team.css.map */

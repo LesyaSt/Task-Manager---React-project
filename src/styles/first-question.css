@@ -1,0 +1,241 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.container .survey {
+  background-color: #f3f3f3;
+  position: relative;
+  width: 100%;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 0 150px;
+}
+.container .survey .logo {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+.container .survey .logo .fa-lemon {
+  font-size: 24px;
+  margin-right: 15px;
+}
+.container .survey h2 {
+  font-size: 36px;
+}
+.container .survey h1 {
+  font-size: 52px;
+}
+.container .survey .options {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 150px;
+  font-size: 36px;
+}
+.container .survey .options .legend {
+  font-weight: 700;
+  font-family: "Klara";
+}
+.container .survey .options .checkbox-option {
+  margin-top: 30px;
+  border: none;
+}
+.container .survey .options .checkbox-option .option1, .container .survey .options .checkbox-option .option2, .container .survey .options .checkbox-option .option3, .container .survey .options .checkbox-option .option4 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 2px solid #cdccd0;
+  border-radius: 3vh;
+  margin: 0 2vh 2vh 0;
+  padding: 10px 15px;
+  /* Стилі для вибраного варіанту */
+  /* Додати стилі для "позначки" вибраного варіанту */
+  /* Стилі для вибраного варіанту */
+  /* Додати стилі для "позначки" вибраного варіанту */
+  /* Стилі для вибраного варіанту */
+  /* Додати стилі для "позначки" вибраного варіанту */
+  /* Стилі для вибраного варіанту */
+  /* Додати стилі для "позначки" вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .work, .container .survey .options .checkbox-option .option2 .work, .container .survey .options .checkbox-option .option3 .work, .container .survey .options .checkbox-option .option4 .work {
+  display: none;
+}
+.container .survey .options .checkbox-option .option1 .custom-work, .container .survey .options .checkbox-option .option2 .custom-work, .container .survey .options .checkbox-option .option3 .custom-work, .container .survey .options .checkbox-option .option4 .custom-work {
+  position: relative;
+  padding-left: 20px; /* Відступ для кастомного елемента */
+  cursor: pointer; /* Курсор-стрілка при наведені */
+}
+.container .survey .options .checkbox-option .option1 .custom-work label::before, .container .survey .options .checkbox-option .option2 .custom-work label::before, .container .survey .options .checkbox-option .option3 .custom-work label::before, .container .survey .options .checkbox-option .option4 .custom-work label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px; /* Ширина кастомного круга */
+  height: 15px; /* Висота кастомного круга */
+  border: 2px solid #cdccd0; /* Колір обводки */
+  border-radius: 50%; /* Кругла форма */
+  background: white; /* Фоновий колір */
+}
+.container .survey .options .checkbox-option .option1 .work:checked + label::before, .container .survey .options .checkbox-option .option2 .work:checked + label::before, .container .survey .options .checkbox-option .option3 .work:checked + label::before, .container .survey .options .checkbox-option .option4 .work:checked + label::before {
+  background: #007BFF; /* Колір заповнення для вибраного варіанту */
+  border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .work:checked + label::after, .container .survey .options .checkbox-option .option2 .work:checked + label::after, .container .survey .options .checkbox-option .option3 .work:checked + label::after, .container .survey .options .checkbox-option .option4 .work:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5vh; /* Відступ від лівого краю кастомного круга */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Ширина для галочки */
+  height: 8px; /* Висота для галочки */
+  border-radius: 50%; /* Кругла форма для галочки */
+  background: white; /* Колір галочки */
+}
+.container .survey .options .checkbox-option .option1 .personal, .container .survey .options .checkbox-option .option2 .personal, .container .survey .options .checkbox-option .option3 .personal, .container .survey .options .checkbox-option .option4 .personal {
+  display: none;
+}
+.container .survey .options .checkbox-option .option1 .custom-personal, .container .survey .options .checkbox-option .option2 .custom-personal, .container .survey .options .checkbox-option .option3 .custom-personal, .container .survey .options .checkbox-option .option4 .custom-personal {
+  position: relative;
+  padding-left: 20px; /* Відступ для кастомного елемента */
+  cursor: pointer; /* Курсор-стрілка при наведені */
+}
+.container .survey .options .checkbox-option .option1 .custom-personal label::before, .container .survey .options .checkbox-option .option2 .custom-personal label::before, .container .survey .options .checkbox-option .option3 .custom-personal label::before, .container .survey .options .checkbox-option .option4 .custom-personal label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px; /* Ширина кастомного круга */
+  height: 15px; /* Висота кастомного круга */
+  border: 2px solid #cdccd0; /* Колір обводки */
+  border-radius: 50%; /* Кругла форма */
+  background: white; /* Фоновий колір */
+}
+.container .survey .options .checkbox-option .option1 .personal:checked + label::before, .container .survey .options .checkbox-option .option2 .personal:checked + label::before, .container .survey .options .checkbox-option .option3 .personal:checked + label::before, .container .survey .options .checkbox-option .option4 .personal:checked + label::before {
+  background: #007BFF; /* Колір заповнення для вибраного варіанту */
+  border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .personal:checked + label::after, .container .survey .options .checkbox-option .option2 .personal:checked + label::after, .container .survey .options .checkbox-option .option3 .personal:checked + label::after, .container .survey .options .checkbox-option .option4 .personal:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5vh; /* Відступ від лівого краю кастомного круга */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Ширина для галочки */
+  height: 8px; /* Висота для галочки */
+  border-radius: 50%; /* Кругла форма для галочки */
+  background: white; /* Колір галочки */
+}
+.container .survey .options .checkbox-option .option1 .study, .container .survey .options .checkbox-option .option2 .study, .container .survey .options .checkbox-option .option3 .study, .container .survey .options .checkbox-option .option4 .study {
+  display: none;
+}
+.container .survey .options .checkbox-option .option1 .custom-study, .container .survey .options .checkbox-option .option2 .custom-study, .container .survey .options .checkbox-option .option3 .custom-study, .container .survey .options .checkbox-option .option4 .custom-study {
+  position: relative;
+  padding-left: 20px; /* Відступ для кастомного елемента */
+  cursor: pointer; /* Курсор-стрілка при наведені */
+}
+.container .survey .options .checkbox-option .option1 .custom-study label::before, .container .survey .options .checkbox-option .option2 .custom-study label::before, .container .survey .options .checkbox-option .option3 .custom-study label::before, .container .survey .options .checkbox-option .option4 .custom-study label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px; /* Ширина кастомного круга */
+  height: 15px; /* Висота кастомного круга */
+  border: 2px solid #cdccd0; /* Колір обводки */
+  border-radius: 50%; /* Кругла форма */
+  background: white; /* Фоновий колір */
+}
+.container .survey .options .checkbox-option .option1 .study:checked + label::before, .container .survey .options .checkbox-option .option2 .study:checked + label::before, .container .survey .options .checkbox-option .option3 .study:checked + label::before, .container .survey .options .checkbox-option .option4 .study:checked + label::before {
+  background: #007BFF; /* Колір заповнення для вибраного варіанту */
+  border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .study:checked + label::after, .container .survey .options .checkbox-option .option2 .study:checked + label::after, .container .survey .options .checkbox-option .option3 .study:checked + label::after, .container .survey .options .checkbox-option .option4 .study:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5vh; /* Відступ від лівого краю кастомного круга */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Ширина для галочки */
+  height: 8px; /* Висота для галочки */
+  border-radius: 50%; /* Кругла форма для галочки */
+  background: white; /* Колір галочки */
+}
+.container .survey .options .checkbox-option .option1 .nonprofit, .container .survey .options .checkbox-option .option2 .nonprofit, .container .survey .options .checkbox-option .option3 .nonprofit, .container .survey .options .checkbox-option .option4 .nonprofit {
+  display: none;
+}
+.container .survey .options .checkbox-option .option1 .custom-nonprofit, .container .survey .options .checkbox-option .option2 .custom-nonprofit, .container .survey .options .checkbox-option .option3 .custom-nonprofit, .container .survey .options .checkbox-option .option4 .custom-nonprofit {
+  position: relative;
+  padding-left: 20px; /* Відступ для кастомного елемента */
+  cursor: pointer; /* Курсор-стрілка при наведені */
+}
+.container .survey .options .checkbox-option .option1 .custom-nonprofit label::before, .container .survey .options .checkbox-option .option2 .custom-nonprofit label::before, .container .survey .options .checkbox-option .option3 .custom-nonprofit label::before, .container .survey .options .checkbox-option .option4 .custom-nonprofit label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px; /* Ширина кастомного круга */
+  height: 15px; /* Висота кастомного круга */
+  border: 2px solid #cdccd0; /* Колір обводки */
+  border-radius: 50%; /* Кругла форма */
+  background: white; /* Фоновий колір */
+}
+.container .survey .options .checkbox-option .option1 .nonprofit:checked + label::before, .container .survey .options .checkbox-option .option2 .nonprofit:checked + label::before, .container .survey .options .checkbox-option .option3 .nonprofit:checked + label::before, .container .survey .options .checkbox-option .option4 .nonprofit:checked + label::before {
+  background: #007BFF; /* Колір заповнення для вибраного варіанту */
+  border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .nonprofit:checked + label::after, .container .survey .options .checkbox-option .option2 .nonprofit:checked + label::after, .container .survey .options .checkbox-option .option3 .nonprofit:checked + label::after, .container .survey .options .checkbox-option .option4 .nonprofit:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5vh; /* Відступ від лівого краю кастомного круга */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Ширина для галочки */
+  height: 8px; /* Висота для галочки */
+  border-radius: 50%; /* Кругла форма для галочки */
+  background: white; /* Колір галочки */
+}
+.container .survey .options label {
+  margin-left: 10px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .survey .btn-continue {
+  position: absolute;
+  bottom: 20vh;
+  right: 10vh;
+  width: 200px;
+  font-size: 26px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3173e1;
+  color: white;
+}
+.container .survey .btn-continue .fa-solid {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.container .survey .btn-continue:hover {
+  cursor: pointer;
+  background-color: #285db7;
+}
+.container .friend {
+  width: 750px;
+  height: 100%;
+  background-image: url("../image/first-page-bg.jpeg");
+  background-size: contain;
+}/*# sourceMappingURL=first-question.css.map */

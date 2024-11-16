@@ -1,0 +1,704 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.container .survey {
+  background-color: #f3f3f3;
+  position: relative;
+  width: 100%;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 0 150px;
+}
+.container .survey .logo {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+.container .survey .logo .fa-lemon {
+  font-size: 24px;
+  margin-right: 15px;
+}
+.container .survey h2 {
+  font-size: 36px;
+}
+.container .survey h1 {
+  font-size: 52px;
+}
+.container .survey .options {
+  display: flex;
+  width: 90vh;
+  height: 350px;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 150px;
+  font-size: 36px;
+}
+.container .survey .options .legend {
+  font-weight: 700;
+  font-family: "Klara";
+}
+.container .survey .options .paragraph {
+  color: #424242;
+  font-size: 26px;
+  margin-top: 5px;
+}
+.container .survey .options .checkbox-option {
+  margin-top: 30px;
+  border: none;
+}
+.container .survey .options .checkbox-option .option1,
+.container .survey .options .checkbox-option .option2,
+.container .survey .options .checkbox-option .option3,
+.container .survey .options .checkbox-option .option4,
+.container .survey .options .checkbox-option .option5,
+.container .survey .options .checkbox-option .option6,
+.container .survey .options .checkbox-option .option7,
+.container .survey .options .checkbox-option .option8 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 2px solid #cdccd0;
+  border-radius: 3vh;
+  margin: 0 2vh 2vh 0;
+  padding: 10px 15px;
+  /* Стилі для вибраного варіанту */
+  /* Додати стилі для "позначки" вибраного варіанту */
+  /* Стилі для вибраного варіанту */
+  /* Додати стилі для "позначки" вибраного варіанту */
+  /* Стилі для вибраного варіанту */
+  /* Додати стилі для "позначки" вибраного варіанту */
+  /* Стилі для вибраного варіанту */
+  /* Додати стилі для "позначки" вибраного варіанту */
+  /* Стилі для вибраного варіанту */
+  /* Додати стилі для "позначки" вибраного варіанту */
+  /* Стилі для вибраного варіанту */
+  /* Додати стилі для "позначки" вибраного варіанту */
+  /* Стилі для вибраного варіанту */
+  /* Додати стилі для "позначки" вибраного варіанту */
+  /* Стилі для вибраного варіанту */
+  /* Додати стилі для "позначки" вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .youTube,
+.container .survey .options .checkbox-option .option2 .youTube,
+.container .survey .options .checkbox-option .option3 .youTube,
+.container .survey .options .checkbox-option .option4 .youTube,
+.container .survey .options .checkbox-option .option5 .youTube,
+.container .survey .options .checkbox-option .option6 .youTube,
+.container .survey .options .checkbox-option .option7 .youTube,
+.container .survey .options .checkbox-option .option8 .youTube {
+  display: none;
+}
+.container .survey .options .checkbox-option .option1 .custom-youTube,
+.container .survey .options .checkbox-option .option2 .custom-youTube,
+.container .survey .options .checkbox-option .option3 .custom-youTube,
+.container .survey .options .checkbox-option .option4 .custom-youTube,
+.container .survey .options .checkbox-option .option5 .custom-youTube,
+.container .survey .options .checkbox-option .option6 .custom-youTube,
+.container .survey .options .checkbox-option .option7 .custom-youTube,
+.container .survey .options .checkbox-option .option8 .custom-youTube {
+  position: relative;
+  padding-left: 20px; /* Відступ для кастомного елемента */
+  cursor: pointer; /* Курсор-стрілка при наведені */
+}
+.container .survey .options .checkbox-option .option1 .custom-youTube label::before,
+.container .survey .options .checkbox-option .option2 .custom-youTube label::before,
+.container .survey .options .checkbox-option .option3 .custom-youTube label::before,
+.container .survey .options .checkbox-option .option4 .custom-youTube label::before,
+.container .survey .options .checkbox-option .option5 .custom-youTube label::before,
+.container .survey .options .checkbox-option .option6 .custom-youTube label::before,
+.container .survey .options .checkbox-option .option7 .custom-youTube label::before,
+.container .survey .options .checkbox-option .option8 .custom-youTube label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px; /* Ширина кастомного круга */
+  height: 15px; /* Висота кастомного круга */
+  border: 2px solid #cdccd0; /* Колір обводки */
+  border-radius: 50%; /* Кругла форма */
+}
+.container .survey .options .checkbox-option .option1 .youTube:checked + label::before,
+.container .survey .options .checkbox-option .option2 .youTube:checked + label::before,
+.container .survey .options .checkbox-option .option3 .youTube:checked + label::before,
+.container .survey .options .checkbox-option .option4 .youTube:checked + label::before,
+.container .survey .options .checkbox-option .option5 .youTube:checked + label::before,
+.container .survey .options .checkbox-option .option6 .youTube:checked + label::before,
+.container .survey .options .checkbox-option .option7 .youTube:checked + label::before,
+.container .survey .options .checkbox-option .option8 .youTube:checked + label::before {
+  background: #007bff; /* Колір заповнення для вибраного варіанту */
+  border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .youTube:checked + label::after,
+.container .survey .options .checkbox-option .option2 .youTube:checked + label::after,
+.container .survey .options .checkbox-option .option3 .youTube:checked + label::after,
+.container .survey .options .checkbox-option .option4 .youTube:checked + label::after,
+.container .survey .options .checkbox-option .option5 .youTube:checked + label::after,
+.container .survey .options .checkbox-option .option6 .youTube:checked + label::after,
+.container .survey .options .checkbox-option .option7 .youTube:checked + label::after,
+.container .survey .options .checkbox-option .option8 .youTube:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5vh; /* Відступ від лівого краю кастомного круга */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Ширина для галочки */
+  height: 8px; /* Висота для галочки */
+  border-radius: 50%; /* Кругла форма для галочки */
+  background: white; /* Колір галочки */
+}
+.container .survey .options .checkbox-option .option1 .ad,
+.container .survey .options .checkbox-option .option2 .ad,
+.container .survey .options .checkbox-option .option3 .ad,
+.container .survey .options .checkbox-option .option4 .ad,
+.container .survey .options .checkbox-option .option5 .ad,
+.container .survey .options .checkbox-option .option6 .ad,
+.container .survey .options .checkbox-option .option7 .ad,
+.container .survey .options .checkbox-option .option8 .ad {
+  display: none;
+}
+.container .survey .options .checkbox-option .option1 .custom-ad,
+.container .survey .options .checkbox-option .option2 .custom-ad,
+.container .survey .options .checkbox-option .option3 .custom-ad,
+.container .survey .options .checkbox-option .option4 .custom-ad,
+.container .survey .options .checkbox-option .option5 .custom-ad,
+.container .survey .options .checkbox-option .option6 .custom-ad,
+.container .survey .options .checkbox-option .option7 .custom-ad,
+.container .survey .options .checkbox-option .option8 .custom-ad {
+  position: relative;
+  padding-left: 20px; /* Відступ для кастомного елемента */
+  cursor: pointer; /* Курсор-стрілка при наведені */
+}
+.container .survey .options .checkbox-option .option1 .custom-ad label::before,
+.container .survey .options .checkbox-option .option2 .custom-ad label::before,
+.container .survey .options .checkbox-option .option3 .custom-ad label::before,
+.container .survey .options .checkbox-option .option4 .custom-ad label::before,
+.container .survey .options .checkbox-option .option5 .custom-ad label::before,
+.container .survey .options .checkbox-option .option6 .custom-ad label::before,
+.container .survey .options .checkbox-option .option7 .custom-ad label::before,
+.container .survey .options .checkbox-option .option8 .custom-ad label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px; /* Ширина кастомного круга */
+  height: 15px; /* Висота кастомного круга */
+  border: 2px solid #cdccd0; /* Колір обводки */
+  border-radius: 50%; /* Кругла форма */
+  background: white; /* Фоновий колір */
+}
+.container .survey .options .checkbox-option .option1 .ad:checked + label::before,
+.container .survey .options .checkbox-option .option2 .ad:checked + label::before,
+.container .survey .options .checkbox-option .option3 .ad:checked + label::before,
+.container .survey .options .checkbox-option .option4 .ad:checked + label::before,
+.container .survey .options .checkbox-option .option5 .ad:checked + label::before,
+.container .survey .options .checkbox-option .option6 .ad:checked + label::before,
+.container .survey .options .checkbox-option .option7 .ad:checked + label::before,
+.container .survey .options .checkbox-option .option8 .ad:checked + label::before {
+  background: #007bff; /* Колір заповнення для вибраного варіанту */
+  border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .ad:checked + label::after,
+.container .survey .options .checkbox-option .option2 .ad:checked + label::after,
+.container .survey .options .checkbox-option .option3 .ad:checked + label::after,
+.container .survey .options .checkbox-option .option4 .ad:checked + label::after,
+.container .survey .options .checkbox-option .option5 .ad:checked + label::after,
+.container .survey .options .checkbox-option .option6 .ad:checked + label::after,
+.container .survey .options .checkbox-option .option7 .ad:checked + label::after,
+.container .survey .options .checkbox-option .option8 .ad:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5vh; /* Відступ від лівого краю кастомного круга */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Ширина для галочки */
+  height: 8px; /* Висота для галочки */
+  border-radius: 50%; /* Кругла форма для галочки */
+  background: white; /* Колір галочки */
+}
+.container .survey .options .checkbox-option .option1 .social-media,
+.container .survey .options .checkbox-option .option2 .social-media,
+.container .survey .options .checkbox-option .option3 .social-media,
+.container .survey .options .checkbox-option .option4 .social-media,
+.container .survey .options .checkbox-option .option5 .social-media,
+.container .survey .options .checkbox-option .option6 .social-media,
+.container .survey .options .checkbox-option .option7 .social-media,
+.container .survey .options .checkbox-option .option8 .social-media {
+  display: none;
+}
+.container .survey .options .checkbox-option .option1 .custom-social-media,
+.container .survey .options .checkbox-option .option2 .custom-social-media,
+.container .survey .options .checkbox-option .option3 .custom-social-media,
+.container .survey .options .checkbox-option .option4 .custom-social-media,
+.container .survey .options .checkbox-option .option5 .custom-social-media,
+.container .survey .options .checkbox-option .option6 .custom-social-media,
+.container .survey .options .checkbox-option .option7 .custom-social-media,
+.container .survey .options .checkbox-option .option8 .custom-social-media {
+  position: relative;
+  padding-left: 20px; /* Відступ для кастомного елемента */
+  cursor: pointer; /* Курсор-стрілка при наведені */
+}
+.container .survey .options .checkbox-option .option1 .custom-social-media label::before,
+.container .survey .options .checkbox-option .option2 .custom-social-media label::before,
+.container .survey .options .checkbox-option .option3 .custom-social-media label::before,
+.container .survey .options .checkbox-option .option4 .custom-social-media label::before,
+.container .survey .options .checkbox-option .option5 .custom-social-media label::before,
+.container .survey .options .checkbox-option .option6 .custom-social-media label::before,
+.container .survey .options .checkbox-option .option7 .custom-social-media label::before,
+.container .survey .options .checkbox-option .option8 .custom-social-media label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px; /* Ширина кастомного круга */
+  height: 15px; /* Висота кастомного круга */
+  border: 2px solid #cdccd0; /* Колір обводки */
+  border-radius: 50%; /* Кругла форма */
+  background: white; /* Фоновий колір */
+}
+.container .survey .options .checkbox-option .option1 .social-media:checked + label::before,
+.container .survey .options .checkbox-option .option2 .social-media:checked + label::before,
+.container .survey .options .checkbox-option .option3 .social-media:checked + label::before,
+.container .survey .options .checkbox-option .option4 .social-media:checked + label::before,
+.container .survey .options .checkbox-option .option5 .social-media:checked + label::before,
+.container .survey .options .checkbox-option .option6 .social-media:checked + label::before,
+.container .survey .options .checkbox-option .option7 .social-media:checked + label::before,
+.container .survey .options .checkbox-option .option8 .social-media:checked + label::before {
+  background: #007bff; /* Колір заповнення для вибраного варіанту */
+  border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .social-media:checked + label::after,
+.container .survey .options .checkbox-option .option2 .social-media:checked + label::after,
+.container .survey .options .checkbox-option .option3 .social-media:checked + label::after,
+.container .survey .options .checkbox-option .option4 .social-media:checked + label::after,
+.container .survey .options .checkbox-option .option5 .social-media:checked + label::after,
+.container .survey .options .checkbox-option .option6 .social-media:checked + label::after,
+.container .survey .options .checkbox-option .option7 .social-media:checked + label::after,
+.container .survey .options .checkbox-option .option8 .social-media:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5vh; /* Відступ від лівого краю кастомного круга */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Ширина для галочки */
+  height: 8px; /* Висота для галочки */
+  border-radius: 50%; /* Кругла форма для галочки */
+  background: white; /* Колір галочки */
+}
+.container .survey .options .checkbox-option .option1 .streaming,
+.container .survey .options .checkbox-option .option2 .streaming,
+.container .survey .options .checkbox-option .option3 .streaming,
+.container .survey .options .checkbox-option .option4 .streaming,
+.container .survey .options .checkbox-option .option5 .streaming,
+.container .survey .options .checkbox-option .option6 .streaming,
+.container .survey .options .checkbox-option .option7 .streaming,
+.container .survey .options .checkbox-option .option8 .streaming {
+  display: none;
+}
+.container .survey .options .checkbox-option .option1 .custom-streaming,
+.container .survey .options .checkbox-option .option2 .custom-streaming,
+.container .survey .options .checkbox-option .option3 .custom-streaming,
+.container .survey .options .checkbox-option .option4 .custom-streaming,
+.container .survey .options .checkbox-option .option5 .custom-streaming,
+.container .survey .options .checkbox-option .option6 .custom-streaming,
+.container .survey .options .checkbox-option .option7 .custom-streaming,
+.container .survey .options .checkbox-option .option8 .custom-streaming {
+  position: relative;
+  padding-left: 20px; /* Відступ для кастомного елемента */
+  cursor: pointer; /* Курсор-стрілка при наведені */
+}
+.container .survey .options .checkbox-option .option1 .custom-streaming label::before,
+.container .survey .options .checkbox-option .option2 .custom-streaming label::before,
+.container .survey .options .checkbox-option .option3 .custom-streaming label::before,
+.container .survey .options .checkbox-option .option4 .custom-streaming label::before,
+.container .survey .options .checkbox-option .option5 .custom-streaming label::before,
+.container .survey .options .checkbox-option .option6 .custom-streaming label::before,
+.container .survey .options .checkbox-option .option7 .custom-streaming label::before,
+.container .survey .options .checkbox-option .option8 .custom-streaming label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px; /* Ширина кастомного круга */
+  height: 15px; /* Висота кастомного круга */
+  border: 2px solid #cdccd0; /* Колір обводки */
+  border-radius: 50%; /* Кругла форма */
+  background: white; /* Фоновий колір */
+}
+.container .survey .options .checkbox-option .option1 .streaming:checked + label::before,
+.container .survey .options .checkbox-option .option2 .streaming:checked + label::before,
+.container .survey .options .checkbox-option .option3 .streaming:checked + label::before,
+.container .survey .options .checkbox-option .option4 .streaming:checked + label::before,
+.container .survey .options .checkbox-option .option5 .streaming:checked + label::before,
+.container .survey .options .checkbox-option .option6 .streaming:checked + label::before,
+.container .survey .options .checkbox-option .option7 .streaming:checked + label::before,
+.container .survey .options .checkbox-option .option8 .streaming:checked + label::before {
+  background: #007bff; /* Колір заповнення для вибраного варіанту */
+  border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .streaming:checked + label::after,
+.container .survey .options .checkbox-option .option2 .streaming:checked + label::after,
+.container .survey .options .checkbox-option .option3 .streaming:checked + label::after,
+.container .survey .options .checkbox-option .option4 .streaming:checked + label::after,
+.container .survey .options .checkbox-option .option5 .streaming:checked + label::after,
+.container .survey .options .checkbox-option .option6 .streaming:checked + label::after,
+.container .survey .options .checkbox-option .option7 .streaming:checked + label::after,
+.container .survey .options .checkbox-option .option8 .streaming:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5vh; /* Відступ від лівого краю кастомного круга */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Ширина для галочки */
+  height: 8px; /* Висота для галочки */
+  border-radius: 50%; /* Кругла форма для галочки */
+  background: white; /* Колір галочки */
+}
+.container .survey .options .checkbox-option .option1 .linkedIn,
+.container .survey .options .checkbox-option .option2 .linkedIn,
+.container .survey .options .checkbox-option .option3 .linkedIn,
+.container .survey .options .checkbox-option .option4 .linkedIn,
+.container .survey .options .checkbox-option .option5 .linkedIn,
+.container .survey .options .checkbox-option .option6 .linkedIn,
+.container .survey .options .checkbox-option .option7 .linkedIn,
+.container .survey .options .checkbox-option .option8 .linkedIn {
+  display: none;
+}
+.container .survey .options .checkbox-option .option1 .custom-linkedIn,
+.container .survey .options .checkbox-option .option2 .custom-linkedIn,
+.container .survey .options .checkbox-option .option3 .custom-linkedIn,
+.container .survey .options .checkbox-option .option4 .custom-linkedIn,
+.container .survey .options .checkbox-option .option5 .custom-linkedIn,
+.container .survey .options .checkbox-option .option6 .custom-linkedIn,
+.container .survey .options .checkbox-option .option7 .custom-linkedIn,
+.container .survey .options .checkbox-option .option8 .custom-linkedIn {
+  position: relative;
+  padding-left: 20px; /* Відступ для кастомного елемента */
+  cursor: pointer; /* Курсор-стрілка при наведені */
+}
+.container .survey .options .checkbox-option .option1 .custom-linkedIn label::before,
+.container .survey .options .checkbox-option .option2 .custom-linkedIn label::before,
+.container .survey .options .checkbox-option .option3 .custom-linkedIn label::before,
+.container .survey .options .checkbox-option .option4 .custom-linkedIn label::before,
+.container .survey .options .checkbox-option .option5 .custom-linkedIn label::before,
+.container .survey .options .checkbox-option .option6 .custom-linkedIn label::before,
+.container .survey .options .checkbox-option .option7 .custom-linkedIn label::before,
+.container .survey .options .checkbox-option .option8 .custom-linkedIn label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px; /* Ширина кастомного круга */
+  height: 15px; /* Висота кастомного круга */
+  border: 2px solid #cdccd0; /* Колір обводки */
+  border-radius: 50%; /* Кругла форма */
+  background: white; /* Фоновий колір */
+}
+.container .survey .options .checkbox-option .option1 .linkedIn:checked + label::before,
+.container .survey .options .checkbox-option .option2 .linkedIn:checked + label::before,
+.container .survey .options .checkbox-option .option3 .linkedIn:checked + label::before,
+.container .survey .options .checkbox-option .option4 .linkedIn:checked + label::before,
+.container .survey .options .checkbox-option .option5 .linkedIn:checked + label::before,
+.container .survey .options .checkbox-option .option6 .linkedIn:checked + label::before,
+.container .survey .options .checkbox-option .option7 .linkedIn:checked + label::before,
+.container .survey .options .checkbox-option .option8 .linkedIn:checked + label::before {
+  background: #007bff; /* Колір заповнення для вибраного варіанту */
+  border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .linkedIn:checked + label::after,
+.container .survey .options .checkbox-option .option2 .linkedIn:checked + label::after,
+.container .survey .options .checkbox-option .option3 .linkedIn:checked + label::after,
+.container .survey .options .checkbox-option .option4 .linkedIn:checked + label::after,
+.container .survey .options .checkbox-option .option5 .linkedIn:checked + label::after,
+.container .survey .options .checkbox-option .option6 .linkedIn:checked + label::after,
+.container .survey .options .checkbox-option .option7 .linkedIn:checked + label::after,
+.container .survey .options .checkbox-option .option8 .linkedIn:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5vh; /* Відступ від лівого краю кастомного круга */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Ширина для галочки */
+  height: 8px; /* Висота для галочки */
+  border-radius: 50%; /* Кругла форма для галочки */
+  background: white; /* Колір галочки */
+}
+.container .survey .options .checkbox-option .option1 .audioAd,
+.container .survey .options .checkbox-option .option2 .audioAd,
+.container .survey .options .checkbox-option .option3 .audioAd,
+.container .survey .options .checkbox-option .option4 .audioAd,
+.container .survey .options .checkbox-option .option5 .audioAd,
+.container .survey .options .checkbox-option .option6 .audioAd,
+.container .survey .options .checkbox-option .option7 .audioAd,
+.container .survey .options .checkbox-option .option8 .audioAd {
+  display: none;
+}
+.container .survey .options .checkbox-option .option1 .custom-audioAd,
+.container .survey .options .checkbox-option .option2 .custom-audioAd,
+.container .survey .options .checkbox-option .option3 .custom-audioAd,
+.container .survey .options .checkbox-option .option4 .custom-audioAd,
+.container .survey .options .checkbox-option .option5 .custom-audioAd,
+.container .survey .options .checkbox-option .option6 .custom-audioAd,
+.container .survey .options .checkbox-option .option7 .custom-audioAd,
+.container .survey .options .checkbox-option .option8 .custom-audioAd {
+  position: relative;
+  padding-left: 20px; /* Відступ для кастомного елемента */
+  cursor: pointer; /* Курсор-стрілка при наведені */
+}
+.container .survey .options .checkbox-option .option1 .custom-audioAd label::before,
+.container .survey .options .checkbox-option .option2 .custom-audioAd label::before,
+.container .survey .options .checkbox-option .option3 .custom-audioAd label::before,
+.container .survey .options .checkbox-option .option4 .custom-audioAd label::before,
+.container .survey .options .checkbox-option .option5 .custom-audioAd label::before,
+.container .survey .options .checkbox-option .option6 .custom-audioAd label::before,
+.container .survey .options .checkbox-option .option7 .custom-audioAd label::before,
+.container .survey .options .checkbox-option .option8 .custom-audioAd label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px; /* Ширина кастомного круга */
+  height: 15px; /* Висота кастомного круга */
+  border: 2px solid #cdccd0; /* Колір обводки */
+  border-radius: 50%; /* Кругла форма */
+  background: white; /* Фоновий колір */
+}
+.container .survey .options .checkbox-option .option1 .audioAd:checked + label::before,
+.container .survey .options .checkbox-option .option2 .audioAd:checked + label::before,
+.container .survey .options .checkbox-option .option3 .audioAd:checked + label::before,
+.container .survey .options .checkbox-option .option4 .audioAd:checked + label::before,
+.container .survey .options .checkbox-option .option5 .audioAd:checked + label::before,
+.container .survey .options .checkbox-option .option6 .audioAd:checked + label::before,
+.container .survey .options .checkbox-option .option7 .audioAd:checked + label::before,
+.container .survey .options .checkbox-option .option8 .audioAd:checked + label::before {
+  background: #007bff; /* Колір заповнення для вибраного варіанту */
+  border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .audioAd:checked + label::after,
+.container .survey .options .checkbox-option .option2 .audioAd:checked + label::after,
+.container .survey .options .checkbox-option .option3 .audioAd:checked + label::after,
+.container .survey .options .checkbox-option .option4 .audioAd:checked + label::after,
+.container .survey .options .checkbox-option .option5 .audioAd:checked + label::after,
+.container .survey .options .checkbox-option .option6 .audioAd:checked + label::after,
+.container .survey .options .checkbox-option .option7 .audioAd:checked + label::after,
+.container .survey .options .checkbox-option .option8 .audioAd:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5vh; /* Відступ від лівого краю кастомного круга */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Ширина для галочки */
+  height: 8px; /* Висота для галочки */
+  border-radius: 50%; /* Кругла форма для галочки */
+  background: white; /* Колір галочки */
+}
+.container .survey .options .checkbox-option .option1 .friends,
+.container .survey .options .checkbox-option .option2 .friends,
+.container .survey .options .checkbox-option .option3 .friends,
+.container .survey .options .checkbox-option .option4 .friends,
+.container .survey .options .checkbox-option .option5 .friends,
+.container .survey .options .checkbox-option .option6 .friends,
+.container .survey .options .checkbox-option .option7 .friends,
+.container .survey .options .checkbox-option .option8 .friends {
+  display: none;
+}
+.container .survey .options .checkbox-option .option1 .custom-friends,
+.container .survey .options .checkbox-option .option2 .custom-friends,
+.container .survey .options .checkbox-option .option3 .custom-friends,
+.container .survey .options .checkbox-option .option4 .custom-friends,
+.container .survey .options .checkbox-option .option5 .custom-friends,
+.container .survey .options .checkbox-option .option6 .custom-friends,
+.container .survey .options .checkbox-option .option7 .custom-friends,
+.container .survey .options .checkbox-option .option8 .custom-friends {
+  position: relative;
+  padding-left: 20px; /* Відступ для кастомного елемента */
+  cursor: pointer; /* Курсор-стрілка при наведені */
+}
+.container .survey .options .checkbox-option .option1 .custom-friends label::before,
+.container .survey .options .checkbox-option .option2 .custom-friends label::before,
+.container .survey .options .checkbox-option .option3 .custom-friends label::before,
+.container .survey .options .checkbox-option .option4 .custom-friends label::before,
+.container .survey .options .checkbox-option .option5 .custom-friends label::before,
+.container .survey .options .checkbox-option .option6 .custom-friends label::before,
+.container .survey .options .checkbox-option .option7 .custom-friends label::before,
+.container .survey .options .checkbox-option .option8 .custom-friends label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px; /* Ширина кастомного круга */
+  height: 15px; /* Висота кастомного круга */
+  border: 2px solid #cdccd0; /* Колір обводки */
+  border-radius: 50%; /* Кругла форма */
+  background: white; /* Фоновий колір */
+}
+.container .survey .options .checkbox-option .option1 .friends:checked + label::before,
+.container .survey .options .checkbox-option .option2 .friends:checked + label::before,
+.container .survey .options .checkbox-option .option3 .friends:checked + label::before,
+.container .survey .options .checkbox-option .option4 .friends:checked + label::before,
+.container .survey .options .checkbox-option .option5 .friends:checked + label::before,
+.container .survey .options .checkbox-option .option6 .friends:checked + label::before,
+.container .survey .options .checkbox-option .option7 .friends:checked + label::before,
+.container .survey .options .checkbox-option .option8 .friends:checked + label::before {
+  background: #007bff; /* Колір заповнення для вибраного варіанту */
+  border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .friends:checked + label::after,
+.container .survey .options .checkbox-option .option2 .friends:checked + label::after,
+.container .survey .options .checkbox-option .option3 .friends:checked + label::after,
+.container .survey .options .checkbox-option .option4 .friends:checked + label::after,
+.container .survey .options .checkbox-option .option5 .friends:checked + label::after,
+.container .survey .options .checkbox-option .option6 .friends:checked + label::after,
+.container .survey .options .checkbox-option .option7 .friends:checked + label::after,
+.container .survey .options .checkbox-option .option8 .friends:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5vh; /* Відступ від лівого краю кастомного круга */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Ширина для галочки */
+  height: 8px; /* Висота для галочки */
+  border-radius: 50%; /* Кругла форма для галочки */
+  background: white; /* Колір галочки */
+}
+.container .survey .options .checkbox-option .option1 .other,
+.container .survey .options .checkbox-option .option2 .other,
+.container .survey .options .checkbox-option .option3 .other,
+.container .survey .options .checkbox-option .option4 .other,
+.container .survey .options .checkbox-option .option5 .other,
+.container .survey .options .checkbox-option .option6 .other,
+.container .survey .options .checkbox-option .option7 .other,
+.container .survey .options .checkbox-option .option8 .other {
+  display: none;
+}
+.container .survey .options .checkbox-option .option1 .custom-other,
+.container .survey .options .checkbox-option .option2 .custom-other,
+.container .survey .options .checkbox-option .option3 .custom-other,
+.container .survey .options .checkbox-option .option4 .custom-other,
+.container .survey .options .checkbox-option .option5 .custom-other,
+.container .survey .options .checkbox-option .option6 .custom-other,
+.container .survey .options .checkbox-option .option7 .custom-other,
+.container .survey .options .checkbox-option .option8 .custom-other {
+  position: relative;
+  padding-left: 20px; /* Відступ для кастомного елемента */
+  cursor: pointer; /* Курсор-стрілка при наведені */
+}
+.container .survey .options .checkbox-option .option1 .custom-other label::before,
+.container .survey .options .checkbox-option .option2 .custom-other label::before,
+.container .survey .options .checkbox-option .option3 .custom-other label::before,
+.container .survey .options .checkbox-option .option4 .custom-other label::before,
+.container .survey .options .checkbox-option .option5 .custom-other label::before,
+.container .survey .options .checkbox-option .option6 .custom-other label::before,
+.container .survey .options .checkbox-option .option7 .custom-other label::before,
+.container .survey .options .checkbox-option .option8 .custom-other label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px; /* Ширина кастомного круга */
+  height: 15px; /* Висота кастомного круга */
+  border: 2px solid #cdccd0; /* Колір обводки */
+  border-radius: 50%; /* Кругла форма */
+  background: white; /* Фоновий колір */
+}
+.container .survey .options .checkbox-option .option1 .other:checked + label::before,
+.container .survey .options .checkbox-option .option2 .other:checked + label::before,
+.container .survey .options .checkbox-option .option3 .other:checked + label::before,
+.container .survey .options .checkbox-option .option4 .other:checked + label::before,
+.container .survey .options .checkbox-option .option5 .other:checked + label::before,
+.container .survey .options .checkbox-option .option6 .other:checked + label::before,
+.container .survey .options .checkbox-option .option7 .other:checked + label::before,
+.container .survey .options .checkbox-option .option8 .other:checked + label::before {
+  background: #007bff; /* Колір заповнення для вибраного варіанту */
+  border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
+}
+.container .survey .options .checkbox-option .option1 .other:checked + label::after,
+.container .survey .options .checkbox-option .option2 .other:checked + label::after,
+.container .survey .options .checkbox-option .option3 .other:checked + label::after,
+.container .survey .options .checkbox-option .option4 .other:checked + label::after,
+.container .survey .options .checkbox-option .option5 .other:checked + label::after,
+.container .survey .options .checkbox-option .option6 .other:checked + label::after,
+.container .survey .options .checkbox-option .option7 .other:checked + label::after,
+.container .survey .options .checkbox-option .option8 .other:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5vh; /* Відступ від лівого краю кастомного круга */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Ширина для галочки */
+  height: 8px; /* Висота для галочки */
+  border-radius: 50%; /* Кругла форма для галочки */
+  background: white; /* Колір галочки */
+}
+.container .survey .options label {
+  margin-left: 10px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .survey .btn-container {
+  background-color: red;
+}
+.container .survey .btn-container .btn-back {
+  position: absolute;
+  bottom: 15vh;
+  right: 85vh;
+  width: 200px;
+  font-size: 26px;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3173e1;
+  color: white;
+}
+.container .survey .btn-container .btn-back .fa-chevron-left {
+  font-size: 18px;
+  margin-right: 10px;
+}
+.container .survey .btn-container .btn-back:hover {
+  background-color: #285db7;
+}
+.container .survey .btn-container .btn-continue {
+  position: absolute;
+  bottom: 15vh;
+  right: 25vh;
+  width: 200px;
+  font-size: 26px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3173e1;
+  color: white;
+}
+.container .survey .btn-container .btn-continue .fa-chevron-right {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.container .survey .btn-container .btn-continue:hover {
+  background-color: #285db7;
+}
+.container .fourth-photo {
+  width: 750px;
+  height: 100%;
+  background-image: url("../image/four-page-bg.jpeg");
+  background-size: contain;
+}/*# sourceMappingURL=fourth-question.css.map */
