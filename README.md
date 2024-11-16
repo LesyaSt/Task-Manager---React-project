@@ -1,1 +1,2 @@
-(Live)[https://task-manager-react-project-eight.vercel.app/]
+## Live 
+- Live Site URL: [Task Manager](task-manager-react-project-eight.vercel.app)
