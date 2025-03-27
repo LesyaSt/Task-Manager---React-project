@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import '../styles/third-question.scss';
-
+import backgroundImage from "../image/third-page-bg.jpeg";
 import Alert from "./Alert"; 
 
 function ThirdQuestion({ onBack, onContinue }) {
@@ -27,201 +27,58 @@ function ThirdQuestion({ onBack, onContinue }) {
     setShowAlert(false); // Закрити сповіщення
   };
 
+  // Масив варіантів для вибору
+  const optionsThird = [
+    { id: "project-management", label: "Project management", value: "Project management" },
+    { id: "product-management", label: "Portfolio managemen", value: "Portfolio managemen" },
+    { id: "goals-strategy", label: "Goals and Strategy", value: "Goals and Strategy" },
+    { id: "task-management", label: "Task management", value: "Task management" },
+    { id: "knowledge-base", label: "Knowledge base", value: "Knowledge base" },
+    { id: "other-item", label: "Other", value: "Other" },
+  ];
+
     return (
-        <div className="container">
+        <div className="container-third">
       {showAlert && (
         <Alert 
           message="Please select an option before continuing." 
           onClose={handleCloseAlert} 
         />
       )}
-      <section className="survey">
-        <div className="logo">
+      <section className="main-third">
+        <div className="logo-third">
           <i className="fa-solid fa-lemon"></i>
-          <h2 className="hello">Lemon Work Management</h2>
+          <h1 className="hello">Lemon Work Management</h1>
         </div>
-        <div className="options">
-          <legend className="legend">
+        <div className="options-third">
+          <legend className="legend-third">
             Choose, what you would like to focus on first
           </legend>
-          <p className="paragraph">Let's get everything set up so that you're comfortable using the platform</p>
-          <fieldset className="checkbox-option">
-            <div className="option1">
-              <div className="custom-tickets">
+          <p className="paragraph-third">Let's get everything set up so that you're comfortable using the platform</p>
+      
+          <fieldset className="checkbox-option-third">
+            {optionsThird.map((option) => (
+              <div className="custom-option-third" key={option.id}>
                 <input
                   type="radio"
-                  id="tickets-and-request"
-                  name="focus"
-                  value="Tickets and request"
-                  className="tickets"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="tickets-and-request">Tickets and request </label>
-              </div>
-            </div>
-
-            <div className="option2">
-              <div className="custom-development">
-                <input
-                  type="radio"
-                  id="personal"
-                  name="focus"
-                  value="Operating activities"
-                  className="development"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="operating">Software development</label>
-              </div>
-            </div>
-
-            <div className="option3">
-              <div className="custom-project">
-                <input
-                  type="radio"
-                  id="project-management"
+                  id={option.id}
                   name="manage"
-                  value="Project management"
-                  className="project"
+                  value={option.value}
                   onChange={handleOptionChange}
                 />
-                <label htmlFor="project-management">Project management</label>
+                <label htmlFor={option.id}>{option.label}</label>
               </div>
-            </div>
-            
-            <div className="option4">
-              <div className="custom-portfolio">
-                <input
-                  type="radio"
-                  id="portfolio-management"
-                  name="manage"
-                  value="Portfolio management"
-                  className="portfolio"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="portfolio-management">Portfolio management</label>
-              </div>
-            </div>
-
-            <div className="option5">
-              <div className="custom-product">
-                <input
-                  type="radio"
-                  id="product-management"
-                  name="manage"
-                  value="Product management"
-                  className="product"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="product-management">Product management</label>
-              </div>
-            </div>
-            
-            <div className="option6">
-              <div className="custom-goals">
-                <input
-                  type="radio"
-                  id="goals-strategy"
-                  name="manage"
-                  value="Goals and Strategy"
-                  className="goals"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="goals-strategy">Goals and Strategy</label>
-              </div>
-            </div>
-
-            <div className="option7">
-              <div className="custom-task">
-                <input
-                  type="radio"
-                  id="task-management"
-                  name="manage"
-                  value="Task management"
-                  className="task"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="task-management">Task management</label>
-              </div>
-            </div>
-
-            <div className="option8">
-              <div className="custom-support">
-                <input
-                  type="radio"
-                  id="support-service"
-                  name="manage"
-                  value="IT support service"
-                  className="support"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="support-service">IT support service</label>
-              </div>
-            </div>
-            <br />
-            <div className="option9">
-              <div className="custom-knowledge">
-                <input
-                  type="radio"
-                  id="knowledge-base"
-                  name="manage"
-                  value="Knowledge base"
-                  className="knowledge"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="knowledge-base">Knowledge base</label>
-              </div>
-            </div>
-
-            <div className="option10">
-              <div className="custom-crm">
-                <input
-                  type="radio"
-                  id="crm-option"
-                  name="manage"
-                  value="CRM"
-                  className="crm"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="crm-option">CRM</label>
-              </div>
-            </div>
-
-            <div className="option11">
-              <div className="custom-resource">
-                <input
-                  type="radio"
-                  id="resource-management"
-                  name="manage"
-                  value="Resource management"
-                  className="resource"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="resource-management">Resource management</label>
-              </div>
-            </div>
-
-            <div className="option12">
-              <div className="custom-other">
-                <input
-                  type="radio"
-                  id="other-item"
-                  name="manage"
-                  value="Other"
-                  className="other"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="other-item">Other</label>
-              </div>
-            </div>
+            ))}
+        
           </fieldset>
-          <div className="btn-container">
+          <div className="btn-container-third">
           
             <button className="btn-back" onClick={onBack}>
             <i className="fa-solid fa-chevron-left"></i>
                 Back
                 </button>
 
-          <button className="btn-continue" onClick={handleContinue} >
+          <button className="btn-continue-third" onClick={handleContinue} >
             Continue
             <i className="fa-solid fa-chevron-right"></i>
           </button>
@@ -229,10 +86,8 @@ function ThirdQuestion({ onBack, onContinue }) {
         </div>
       </section>
 
-      <section>
-        <div className="third-photo">
-          
-        </div>
+      <section className="bg-photo-third">
+      <img className="third-bg" src={backgroundImage} alt="background" />
       </section>
     </div>
   );

@@ -1,131 +1,68 @@
 import React, { useState } from "react";
-
-// import "./Survey";
 import "../styles/first-question.scss";
-
-import Alert from "./Alert"; 
-
-function FirstQuestion({onContinue}) {
+import Alert from "./Alert";
+import backgroundImage from "../image/first-page-bg.jpeg";
+function FirstQuestion({ onContinue }) {
   const [showAlert, setShowAlert] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const options = [
+    { id: "work", label: "Work" },
+    { id: "personal", label: "Personal" },
+    { id: "study", label: "Study" },
+    { id: "nonprofit", label: "Non-profit organization" },
+  ];
+
   const handleContinue = () => {
     if (!selectedOption) {
-      setShowAlert(true); // Сповіщення, якщо варіант не вибрано
+      setShowAlert(true);
       return;
     }
-    onContinue(); // Виклик функції переходу, якщо варіант вибрано
+    onContinue();
   };
 
-  const [selectedOption, setSelectedOption] = useState("");
-//   const [isFirstQuestionVisible, setIsFirstQuestionVisible] = useState(true);
-
-
-//   const handleContinue = () => {
-//     if (!selectedOption) {
-//       alert("Please select an option before continuing.");
-//       return;
-//     }
-//     // The logic of continuation
-//     // При натисканні кнопки "Продовжити" приховати перше питання
-//     setIsFirstQuestionVisible(false);
-//   };
-
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value); // Update the state with the selected option
-  };
-
-//   if (!isFirstQuestionVisible) {
-//     return <SecondQuestion />; // Показати друге питання, якщо перше не видиме
-// }
-const handleCloseAlert = () => {
-  setShowAlert(false); // Закрити сповіщення
-};
   return (
     
     <div className="container">
       {showAlert && (
         <Alert 
           message="Please select an option before continuing." 
-          onClose={handleCloseAlert} 
+          onClose={() => setShowAlert(false)} 
         />
       )}
-      <section className="survey">
-      <div className="logo">
-    <i className="fa-solid fa-lemon"></i>
-    <h2 className="hello">Lemon Work Management</h2>
-  </div>
+      <section className="why">
         <div className="options">
+        <div className="logo">
+          <i className="fa-solid fa-lemon"></i>
+          <h1 className="hello">Lemon Work Management</h1>
+        </div>
           <legend className="legend">Hello, why are you here?</legend>
           <fieldset className="checkbox-option">
-            <div className="option1">
-              <div className="custom-work">
+            {options.map((option) => (
+              <div key={option.id} className="option">
                 <input
                   type="radio"
-                  id="work"
+                  id={option.id}
                   name="purpose"
-                  value="Work"
-                  className="work"
-                  onChange={handleOptionChange}
+                  value={option.label}
+                  onChange={(e) => setSelectedOption(e.target.value)}
                 />
-                <label htmlFor="work">Work</label>
+                <label htmlFor={option.id}>{option.label}</label>
               </div>
-            </div>
-
-            <div className="option2">
-              <div className="custom-personal">
-                <input
-                  type="radio"
-                  id="personal"
-                  name="purpose"
-                  value="Personal"
-                  className="personal"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="personal">Personal</label>
-              </div>
-            </div>
-
-            <div className="option3">
-              <div className="custom-study">
-                <input
-                  type="radio"
-                  id="study"
-                  name="purpose"
-                  value="Study"
-                  className="study"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="study">Study</label>
-              </div>
-            </div>
-<br />
-            <div className="option4">
-              <div className="custom-nonprofit">
-                <input
-                  type="radio"
-                  id="nonprofit-organization"
-                  name="purpose"
-                  value="Non-profit organization"
-                  className="nonprofit"
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="nonprofit-organization">
-                  Non-profit organization
-                </label>
-              </div>
-            </div>
+            ))}
           </fieldset>
           <button className="btn-continue" onClick={handleContinue}>
             Continue
             <i className="fa-solid fa-chevron-right"></i>
           </button>
         </div>
+       
       </section>
-
-      <section>
-        <div className="friend">
-          
-        </div>
+     
+      <section className="bg-photo">
+      <img className="first-bg" src={backgroundImage} alt="background" />
       </section>
+    
     </div>
   );
 }

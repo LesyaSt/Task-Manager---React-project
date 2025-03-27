@@ -1,0 +1,150 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.table-container {
+  width: 95%;
+  margin-left: 20px;
+}
+.table-container table {
+  border-collapse: collapse;
+  margin: 20px 0;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.table-container table .th-due-date {
+  width: 200px;
+}
+.table-container table .th-notes {
+  width: 500px;
+}
+.table-container table th,
+.table-container table td {
+  padding: 8px 12px;
+  border: 1px solid #333;
+  text-align: left;
+}
+.table-container table th {
+  background-color: #f8f9fa;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+}
+.table-container table tr:hover {
+  background-color: #f1f1f1;
+}
+.table-container table .check {
+  width: 20px;
+  background: none;
+}
+.table-container table .td-task input {
+  width: 300px;
+  height: 100%;
+  border: none;
+  padding: 5px;
+}
+.table-container table .td-task input:focus {
+  outline: none;
+  border: 1px solid #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.table-container table .status {
+  height: 100%;
+  width: 200px;
+}
+.table-container table .status .td-status {
+  width: 100%;
+  font-size: 18px;
+  background: none;
+  border: none;
+  color: white;
+}
+.table-container table .status .td-status:focus {
+  outline: none;
+}
+.table-container table .priority {
+  height: 100%;
+  width: 200px;
+}
+.table-container table .priority .td-priority {
+  width: 100%;
+  font-size: 18px;
+  background: none;
+  border: none;
+  color: white;
+}
+.table-container table .priority .td-priority:focus {
+  outline: none;
+}
+.table-container table .td-date {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  height: 100px;
+}
+.table-container table .td-date input[type=date] {
+  background: none; /* фон */
+  border: none; /* Оточення інпуту */
+  padding: 10px; /* Внутрішні відступи */
+  border-radius: 5px; /* Округлення */
+  border: none;
+  font-size: 18px; /* Розмір шрифту */
+  transition: all 0.3s ease; /* Анімація переходів */
+}
+.table-container table .td-date input[type=date]:focus {
+  border-color: #4CAF50; /* Колір бордера при фокусі */
+  background-color: #e8f5e9; /* Легке підсвічування фону при фокусі */
+}
+.table-container table .td-date input[type=date]::-webkit-calendar-picker-indicator {
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 5px;
+}
+.table-container table .notes {
+  padding: 5px;
+}
+.table-container table .notes .text-area {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+}
+.table-container table .notes .text-area:focus {
+  outline-color: black;
+}
+.table-container button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.table-container button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .table-container table {
+    font-size: 14px;
+  }
+  .table-container table th,
+  .table-container table td {
+    padding: 6px 8px;
+  }
+}/*# sourceMappingURL=todo-list.css.map */

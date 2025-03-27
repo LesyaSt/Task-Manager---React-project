@@ -18,6 +18,10 @@ function WorkPlace() {
           <i className="fa-regular fa-calendar"></i>
           Calendar
         </button>
+        <button className="btn">
+        <i className="fa-solid fa-border-all"></i>
+          Board
+        </button>
       </div>
 
       <TodoList />

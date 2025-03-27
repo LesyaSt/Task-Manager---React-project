@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ecf0fa;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2%;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header .logo .fa-lemon {
+  font-size: 32px;
+}
+.header .logo h1 {
+  font-weight: 300;
+}
+.header .logo h1 span {
+  font-weight: bold;
+}
+.header .header-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  height: 70px;
+  position: relative;
+}
+.header .header-tools::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 50%;
+  background-color: grey;
+  left: calc(85% - 1px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header .header-tools .vertical-line {
+  width: 2px;
+  height: 50%;
+  background-color: grey;
+}
+.header .header-tools button {
+  background: none;
+  border: none;
+}
+.header .header-tools button .icon-header {
+  font-size: 32px;
+}
+
+.work-place {
+  display: flex;
+}/*# sourceMappingURL=main-page.css.map */

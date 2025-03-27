@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.workplace-container {
+  width: 100%;
+  height: 800px;
+  margin-left: 2em;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+}
+.workplace-container .buttons-options {
+  display: flex;
+  justify-content: left;
+  margin-top: 10px;
+  height: 50px;
+}
+.workplace-container .buttons-options i {
+  margin-right: 10px;
+}
+.workplace-container .buttons-options .btn {
+  background: none;
+  font-size: 24px;
+  margin-left: 40px;
+  border: none;
+}
+.workplace-container .buttons-options::before {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 2px;
+  background-color: grey;
+  top: 130px;
+  margin-left: 2%;
+  transform: translateY(-50%);
+}
+.workplace-container .buttons-options .btn:hover {
+  background-color: grey;
+}/*# sourceMappingURL=work-place.css.map */

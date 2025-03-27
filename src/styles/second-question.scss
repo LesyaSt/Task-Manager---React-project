@@ -3,696 +3,163 @@
   margin: 0;
   padding: 0;
 }
-.container {
+.container-second {
+ display: flex;
+ height: 100vh;
+ overflow: hidden;
+}
+.choose-what {
+  flex: 1;
   display: flex;
-  flex-direction: row;
-
-.survey {
-  background-color: #f3f3f3;
-  position: relative;
-  width: 100%;
-  height: 900px;
-
-  display: flex;
-
   flex-direction: column;
+  flex-wrap: wrap;
+  padding: 40px;
+  justify-content: center;
+  margin-left: 50px;
+}
 
-  padding: 100px 0 0 150px;
-  .logo {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    .fa-lemon {
-      font-size: 24px;
-      margin-right: 15px;
-    }
+.logo-second {
+  display: flex;
+  margin-bottom: 50px;
+  color: black;
+  margin-top: 50px;
+  .fa-lemon,
+  .hello {
+    font-size: 32px;
+    margin-right: 10px;
   }
-  h2 {
-    // background-color: red;
+}
+.checkbox-option-second {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.options-second {
+  display: flex;
+  flex-direction: column;
+  color: #a0a0a1;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+.custom-option {
+  display: flex;
+  border: 2px solid #767678;
+  border-radius: 50px;
+  color: #a0a0a1;
+  padding: 10px 20px;
+  margin: 15px 15px 0 0;
+}
 
-    font-size: 36px;
-  }
+.legend-choose {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: grey;
+}
 
-  h1 {
-    // background-color: aqua;
-    font-size: 52px;
-    // font-weight: 700;
+label {
+  margin-left: 10px;
+}
+.btn-container {
+display: flex;
+justify-content: space-around;
+
+.btn-back, 
+.btn-continue-second {
+  width: 145px;
+  height: 45px;
+  background: #0076f1;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 16px;
+  color: white;
+  margin-top: 100px;
+}
+}
+.bg-photo-second {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  .second-bg {
+    max-width: 100%;
+    height: auto;
   }
-  .options {
-    // background-color: yellow;
-    display: flex;
-    width: 90vh;
-    height: 350px;
-    overflow-y: scroll;
+}
+@media (max-width: 768px) {
+  .container-second {
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 150px;
-
-    font-size: 36px;
-
-    .legend {
-      font-weight: 700;
-      font-family: "Klara";
-    }
-    .paragraph {
-      color: #424242;
-      font-size: 26px;
-      margin-top: 5px;
-    }
-
-    .checkbox-option {
-      margin-top: 30px;
-      border: none;
-
-      //
-      .option1,
-      .option2,
-      .option3,
-      .option4,
-      .option5,
-      .option6,
-      .option7,
-      .option8,
-      .option9,
-      .option10,
-      .option11,
-      .option12 {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-
-        background: none;
-        border: 2px solid #cdccd0;
-        border-radius: 3vh;
-        margin: 0 2vh 2vh 0;
-        padding: 10px 15px;
-        //
-        .work {
-          display: none;
-        }
-
-        .custom-work {
-          position: relative;
-          padding-left: 20px; /* Відступ для кастомного елемента */
-          cursor: pointer; /* Курсор-стрілка при наведені */
-        }
-        .custom-work label::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 15px; /* Ширина кастомного круга */
-          height: 15px; /* Висота кастомного круга */
-          border: 2px solid #cdccd0; /* Колір обводки */
-          border-radius: 50%; /* Кругла форма */
-          background: white; /* Фоновий колір */
-        }
-
-        /* Стилі для вибраного варіанту */
-        .work:checked + label::before {
-          background: #007bff; /* Колір заповнення для вибраного варіанту */
-          border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
-        }
-
-        /* Додати стилі для "позначки" вибраного варіанту */
-        .work:checked + label::after {
-          content: "";
-          position: absolute;
-          left: 0.5vh; /* Відступ від лівого краю кастомного круга */
-          top: 50%;
-          transform: translateY(-50%);
-          width: 8px; /* Ширина для галочки */
-          height: 8px; /* Висота для галочки */
-          border-radius: 50%; /* Кругла форма для галочки */
-          background: white; /* Колір галочки */
-        }
-
-        //
-        //
-        .operating {
-          display: none;
-        }
-
-        .custom-operating {
-          position: relative;
-          padding-left: 20px; /* Відступ для кастомного елемента */
-          cursor: pointer; /* Курсор-стрілка при наведені */
-        }
-        .custom-operating label::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 15px; /* Ширина кастомного круга */
-          height: 15px; /* Висота кастомного круга */
-          border: 2px solid #cdccd0; /* Колір обводки */
-          border-radius: 50%; /* Кругла форма */
-          background: white; /* Фоновий колір */
-        }
-
-        /* Стилі для вибраного варіанту */
-        .operating:checked + label::before {
-          background: #007bff; /* Колір заповнення для вибраного варіанту */
-          border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
-        }
-
-        /* Додати стилі для "позначки" вибраного варіанту */
-        .operating:checked + label::after {
-          content: "";
-          position: absolute;
-          left: 0.5vh; /* Відступ від лівого краю кастомного круга */
-          top: 50%;
-          transform: translateY(-50%);
-          width: 8px; /* Ширина для галочки */
-          height: 8px; /* Висота для галочки */
-          border-radius: 50%; /* Кругла форма для галочки */
-          background: white; /* Колір галочки */
-        }
-
-        //
-        //
-        .study {
-          display: none;
-        }
-
-        .custom-study {
-          position: relative;
-          padding-left: 20px; /* Відступ для кастомного елемента */
-          cursor: pointer; /* Курсор-стрілка при наведені */
-        }
-        .custom-study label::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 15px; /* Ширина кастомного круга */
-          height: 15px; /* Висота кастомного круга */
-          border: 2px solid #cdccd0; /* Колір обводки */
-          border-radius: 50%; /* Кругла форма */
-          background: white; /* Фоновий колір */
-        }
-
-        /* Стилі для вибраного варіанту */
-        .study:checked + label::before {
-          background: #007bff; /* Колір заповнення для вибраного варіанту */
-          border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
-        }
-
-        /* Додати стилі для "позначки" вибраного варіанту */
-        .study:checked + label::after {
-          content: "";
-          position: absolute;
-          left: 0.5vh; /* Відступ від лівого краю кастомного круга */
-          top: 50%;
-          transform: translateY(-50%);
-          width: 8px; /* Ширина для галочки */
-          height: 8px; /* Висота для галочки */
-          border-radius: 50%; /* Кругла форма для галочки */
-          background: white; /* Колір галочки */
-        }
-        //
-        //
-        .nonprofit {
-          display: none;
-        }
-
-        .custom-nonprofit {
-          position: relative;
-          padding-left: 20px; /* Відступ для кастомного елемента */
-          cursor: pointer; /* Курсор-стрілка при наведені */
-        }
-
-        .custom-nonprofit label::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 15px; /* Ширина кастомного круга */
-          height: 15px; /* Висота кастомного круга */
-          border: 2px solid #cdccd0; /* Колір обводки */
-          border-radius: 50%; /* Кругла форма */
-          background: white; /* Фоновий колір */
-        }
-
-        /* Стилі для вибраного варіанту */
-        .nonprofit:checked + label::before {
-          background: #007bff; /* Колір заповнення для вибраного варіанту */
-          border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
-        }
-
-        /* Додати стилі для "позначки" вибраного варіанту */
-        .nonprofit:checked + label::after {
-          content: "";
-          position: absolute;
-          left: 0.5vh; /* Відступ від лівого краю кастомного круга */
-          top: 50%;
-          transform: translateY(-50%);
-          width: 8px; /* Ширина для галочки */
-          height: 8px; /* Висота для галочки */
-          border-radius: 50%; /* Кругла форма для галочки */
-          background: white; /* Колір галочки */
-        }
-
-        .project {
-          display: none;
-        }
-
-        .custom-project {
-          position: relative;
-          padding-left: 20px; /* Відступ для кастомного елемента */
-          cursor: pointer; /* Курсор-стрілка при наведені */
-        }
-
-        .custom-project label::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 15px; /* Ширина кастомного круга */
-          height: 15px; /* Висота кастомного круга */
-          border: 2px solid #cdccd0; /* Колір обводки */
-          border-radius: 50%; /* Кругла форма */
-          background: white; /* Фоновий колір */
-        }
-
-        /* Стилі для вибраного варіанту */
-        .project:checked + label::before {
-          background: #007bff; /* Колір заповнення для вибраного варіанту */
-          border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
-        }
-
-        /* Додати стилі для "позначки" вибраного варіанту */
-        .project:checked + label::after {
-          content: "";
-          position: absolute;
-          left: 0.5vh; /* Відступ від лівого краю кастомного круга */
-          top: 50%;
-          transform: translateY(-50%);
-          width: 8px; /* Ширина для галочки */
-          height: 8px; /* Висота для галочки */
-          border-radius: 50%; /* Кругла форма для галочки */
-          background: white; /* Колір галочки */
-        }
-
-        .product {
-          display: none;
-        }
-
-        .custom-product {
-          position: relative;
-          padding-left: 20px; /* Відступ для кастомного елемента */
-          cursor: pointer; /* Курсор-стрілка при наведені */
-        }
-        .custom-product label::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 15px; /* Ширина кастомного круга */
-          height: 15px; /* Висота кастомного круга */
-          border: 2px solid #cdccd0; /* Колір обводки */
-          border-radius: 50%; /* Кругла форма */
-          background: white; /* Фоновий колір */
-        }
-
-        /* Стилі для вибраного варіанту */
-        .product:checked + label::before {
-          background: #007bff; /* Колір заповнення для вибраного варіанту */
-          border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
-        }
-
-        /* Додати стилі для "позначки" вибраного варіанту */
-        .product:checked + label::after {
-          content: "";
-          position: absolute;
-          left: 0.5vh; /* Відступ від лівого краю кастомного круга */
-          top: 50%;
-          transform: translateY(-50%);
-          width: 8px; /* Ширина для галочки */
-          height: 8px; /* Висота для галочки */
-          border-radius: 50%; /* Кругла форма для галочки */
-          background: white; /* Колір галочки */
-        }
-
-        .recruitment {
-          display: none;
-        }
-
-        .custom-recruitment {
-          position: relative;
-          padding-left: 20px; /* Відступ для кастомного елемента */
-          cursor: pointer; /* Курсор-стрілка при наведені */
-        }
-        .custom-recruitment label::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 15px; /* Ширина кастомного круга */
-          height: 15px; /* Висота кастомного круга */
-          border: 2px solid #cdccd0; /* Колір обводки */
-          border-radius: 50%; /* Кругла форма */
-          background: white; /* Фоновий колір */
-        }
-
-        /* Стилі для вибраного варіанту */
-        .recruitment:checked + label::before {
-          background: #007bff; /* Колір заповнення для вибраного варіанту */
-          border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
-        }
-
-        /* Додати стилі для "позначки" вибраного варіанту */
-        .recruitment:checked + label::after {
-          content: "";
-          position: absolute;
-          left: 0.5vh; /* Відступ від лівого краю кастомного круга */
-          top: 50%;
-          transform: translateY(-50%);
-          width: 8px; /* Ширина для галочки */
-          height: 8px; /* Висота для галочки */
-          border-radius: 50%; /* Кругла форма для галочки */
-          background: white; /* Колір галочки */
-        }
-
-        .building {
-          display: none;
-        }
-
-        .custom-building {
-          position: relative;
-          padding-left: 20px; /* Відступ для кастомного елемента */
-          cursor: pointer; /* Курсор-стрілка при наведені */
-        }
-        .custom-building label::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 15px; /* Ширина кастомного круга */
-          height: 15px; /* Висота кастомного круга */
-          border: 2px solid #cdccd0; /* Колір обводки */
-          border-radius: 50%; /* Кругла форма */
-          background: white; /* Фоновий колір */
-        }
-
-        /* Стилі для вибраного варіанту */
-        .building:checked + label::before {
-          background: #007bff; /* Колір заповнення для вибраного варіанту */
-          border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
-        }
-
-        /* Додати стилі для "позначки" вибраного варіанту */
-        .building:checked + label::after {
-          content: "";
-          position: absolute;
-          left: 0.5vh; /* Відступ від лівого краю кастомного круга */
-          top: 50%;
-          transform: translateY(-50%);
-          width: 8px; /* Ширина для галочки */
-          height: 8px; /* Висота для галочки */
-          border-radius: 50%; /* Кругла форма для галочки */
-          background: white; /* Колір галочки */
-        }
-
-        .marketing {
-          display: none;
-        }
-
-        .custom-marketing {
-          position: relative;
-          padding-left: 20px; /* Відступ для кастомного елемента */
-          cursor: pointer; /* Курсор-стрілка при наведені */
-        }
-        .custom-marketing label::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 15px; /* Ширина кастомного круга */
-          height: 15px; /* Висота кастомного круга */
-          border: 2px solid #cdccd0; /* Колір обводки */
-          border-radius: 50%; /* Кругла форма */
-          background: white; /* Фоновий колір */
-        }
-
-        /* Стилі для вибраного варіанту */
-        .marketing:checked + label::before {
-          background: #007bff; /* Колір заповнення для вибраного варіанту */
-          border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
-        }
-
-        /* Додати стилі для "позначки" вибраного варіанту */
-        .marketing:checked + label::after {
-          content: "";
-          position: absolute;
-          left: 0.5vh; /* Відступ від лівого краю кастомного круга */
-          top: 50%;
-          transform: translateY(-50%);
-          width: 8px; /* Ширина для галочки */
-          height: 8px; /* Висота для галочки */
-          border-radius: 50%; /* Кругла форма для галочки */
-          background: white; /* Колір галочки */
-        }
-
-        .technology {
-          display: none;
-        }
-
-        .custom-technology {
-          position: relative;
-          padding-left: 20px; /* Відступ для кастомного елемента */
-          cursor: pointer; /* Курсор-стрілка при наведені */
-        }
-
-        .custom-technology label::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 15px; /* Ширина кастомного круга */
-          height: 15px; /* Висота кастомного круга */
-          border: 2px solid #cdccd0; /* Колір обводки */
-          border-radius: 50%; /* Кругла форма */
-          background: white; /* Фоновий колір */
-        }
-
-        /* Стилі для вибраного варіанту */
-        .technology:checked + label::before {
-          background: #007bff; /* Колір заповнення для вибраного варіанту */
-          border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
-        }
-
-        /* Додати стилі для "позначки" вибраного варіанту */
-        .technology:checked + label::after {
-          content: "";
-          position: absolute;
-          left: 0.5vh; /* Відступ від лівого краю кастомного круга */
-          top: 50%;
-          transform: translateY(-50%);
-          width: 8px; /* Ширина для галочки */
-          height: 8px; /* Висота для галочки */
-          border-radius: 50%; /* Кругла форма для галочки */
-          background: white; /* Колір галочки */
-        }
-
-        .design-creative {
-          display: none;
-        }
-
-        .custom-design {
-          position: relative;
-          padding-left: 20px; /* Відступ для кастомного елемента */
-          cursor: pointer; /* Курсор-стрілка при наведені */
-        }
-        .custom-design label::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 15px; /* Ширина кастомного круга */
-          height: 15px; /* Висота кастомного круга */
-          border: 2px solid #cdccd0; /* Колір обводки */
-          border-radius: 50%; /* Кругла форма */
-          background: white; /* Фоновий колір */
-        }
-
-        /* Стилі для вибраного варіанту */
-        .design-creative:checked + label::before {
-          background: #007bff; /* Колір заповнення для вибраного варіанту */
-          border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
-        }
-
-        /* Додати стилі для "позначки" вибраного варіанту */
-        .design-creative:checked + label::after {
-          content: "";
-          position: absolute;
-          left: 0.5vh; /* Відступ від лівого краю кастомного круга */
-          top: 50%;
-          transform: translateY(-50%);
-          width: 8px; /* Ширина для галочки */
-          height: 8px; /* Висота для галочки */
-          border-radius: 50%; /* Кругла форма для галочки */
-          background: white; /* Колір галочки */
-        }
-
-        .finance {
-          display: none;
-        }
-
-        .custom-finance {
-          position: relative;
-          padding-left: 20px; /* Відступ для кастомного елемента */
-          cursor: pointer; /* Курсор-стрілка при наведені */
-        }
-        .custom-finance label::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 15px; /* Ширина кастомного круга */
-          height: 15px; /* Висота кастомного круга */
-          border: 2px solid #cdccd0; /* Колір обводки */
-          border-radius: 50%; /* Кругла форма */
-          background: white; /* Фоновий колір */
-        }
-
-        /* Стилі для вибраного варіанту */
-        .finance:checked + label::before {
-          background: #007bff; /* Колір заповнення для вибраного варіанту */
-          border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
-        }
-
-        /* Додати стилі для "позначки" вибраного варіанту */
-        .finance:checked + label::after {
-          content: "";
-          position: absolute;
-          left: 0.5vh; /* Відступ від лівого краю кастомного круга */
-          top: 50%;
-          transform: translateY(-50%);
-          width: 8px; /* Ширина для галочки */
-          height: 8px; /* Висота для галочки */
-          border-radius: 50%; /* Кругла форма для галочки */
-          background: white; /* Колір галочки */
-        }
-
-        .other {
-          display: none;
-        }
-
-        .custom-other {
-          position: relative;
-          padding-left: 20px; /* Відступ для кастомного елемента */
-          cursor: pointer; /* Курсор-стрілка при наведені */
-        }
-        .custom-other label::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 15px; /* Ширина кастомного круга */
-          height: 15px; /* Висота кастомного круга */
-          border: 2px solid #cdccd0; /* Колір обводки */
-          border-radius: 50%; /* Кругла форма */
-          background: white; /* Фоновий колір */
-        }
-
-        /* Стилі для вибраного варіанту */
-        .other:checked + label::before {
-          background: #007bff; /* Колір заповнення для вибраного варіанту */
-          border: 1px solid #0056b3; /* Тінь для вибраного варіанту */
-        }
-
-        /* Додати стилі для "позначки" вибраного варіанту */
-        .other:checked + label::after {
-          content: "";
-          position: absolute;
-          left: 0.5vh; /* Відступ від лівого краю кастомного круга */
-          top: 50%;
-          transform: translateY(-50%);
-          width: 8px; /* Ширина для галочки */
-          height: 8px; /* Висота для галочки */
-          border-radius: 50%; /* Кругла форма для галочки */
-          background: white; /* Колір галочки */
-        }
-      }
-    }
-    label {
-      margin-left: 10px;
-      font-size: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    justify-content: center;
   }
-
-  .btn-container{
-    background-color: red;
-
-.btn-back {
-    position: absolute;
-    bottom: 15vh;
-    right: 85vh;
-    width: 200px;
-    font-size: 26px;
-    padding: 10px 15px;
-   margin-left: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #3173e1;
+  .logo-second {
+    display: flex;
     color: white;
-
-    .fa-chevron-left{
-        font-size: 18px;
-      margin-right: 10px;
-    }
-
-    &:hover {
-        background-color: #285db7;
-      }
-}
-
-  .btn-continue {
-    position: absolute;
-    bottom: 15vh;
-    right: 25vh;
-    width: 200px;
-    font-size: 26px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    background-color: #3173e1;
-    color: white;
-
-    .fa-chevron-right {
-      font-size: 18px;
-      margin-left: 10px;
-    }
-
-    &:hover {
-      background-color: #285db7;
-    }
-  }
-}
-
-}
-.second-photo {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 20px;
+    z-index: 1001;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(27, 27, 27, 0.4); /* напівпрозорий білий */
+    backdrop-filter: blur(3px); /* розмиття */
+    -webkit-backdrop-filter: blur(3px); /* Safari */
+    .hello {
+    font-size: 24px;
    
-  width: 750px;
-  height: 100%;
-  background-image: url('../image/five-bg.jpeg');
-  background-size: contain;
-}
+    }
+    .fa-lemon {
+      font-size: 24px !important;
+    }
+  }
+  .legend-choose {
+    color: white;
+    margin-top: 50px;
+  }
+
+  .bg-photo-second {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1000;
+    position: absolute;
+  }
+  .bg-photo-second {
+    .second-bg {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+  .choose-what {
+    position: relative;
+    z-index: 1000;
+    margin: 0;
+    align-items: center;
+  }
+  .options-second {
+    background: rgba(27, 27, 27, 0.4); /* напівпрозорий білий */
+    backdrop-filter: blur(3px); /* розмиття */
+    -webkit-backdrop-filter: blur(3px); /* Safari */
+    border-radius: 10px;
+   .legend-choose, 
+   .paragraph-choose {
+    margin-left: 0px;
+    padding: 0 10px;
+    color: white;
+   }
+  }
+
+  .custom-option {
+    color: white;
+    border: 2px solid white;
+    margin-left: 10px;
+  }
+
+  .btn-continue-second {
+    margin: 35px 0 35px 0;
+  }
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
   padding: 0;
@@ -29,70 +28,74 @@
 }
 .container .survey .variant {
   width: 90%;
-  margin-top: 15vh;
+  margin-top: 10vh;
+  border: none;
 }
 .container .survey .variant .legend {
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 50px;
 }
 .container .survey .variant .checkbox-option {
   display: flex;
-  justify-content: left;
+  flex-direction: column;
   width: 100%;
   margin-top: 2vh;
 }
 .container .survey .variant .checkbox-option .team {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
   border-radius: 1vh;
-  margin: 0;
+  margin: 1rem 0 0 0;
   padding: 0;
-}
-.container .survey .variant .checkbox-option .team .custom-email-adress {
-  display: flex;
-  width: 100%;
-  height: 8vh;
   border: 2px solid #cdccd0;
 }
-.container .survey .variant .checkbox-option .team .custom-email-adress .email-adress {
+.container .survey .variant .checkbox-option .team .email-adress {
   margin-left: 15px;
-  font-size: 24px;
+  font-size: 1.5rem;
   background: none;
   border: none;
+  width: 100%;
 }
-.container .survey .variant .checkbox-option .team .custom-email-adress .email-adress:focus {
-  outline: none; /* Вимикає стандартний обведений фокус */
-  border: none;
-}
-.container .survey .variant .checkbox-option .team .custom-email-adress .email-adress::-moz-placeholder {
-  font-size: 28px;
+.container .survey .variant .checkbox-option .team .email-adress::-moz-placeholder {
+  font-size: 1.75rem;
   font-weight: 500;
 }
-.container .survey .variant .checkbox-option .team .custom-email-adress .email-adress::placeholder {
-  font-size: 28px;
+.container .survey .variant .checkbox-option .team .email-adress::placeholder {
+  font-size: 1.75rem;
   font-weight: 500;
+}
+.container .survey .variant .checkbox-option .team .email-adress:focus {
+  outline: none;
 }
 .container .survey .variant .checkbox-option .team .role-container {
   height: 8vh;
-  border-top: 2px solid #cdccd0; /* Верхній бордер */
-  border-right: 2px solid #cdccd0; /* Лівий бордер */
-  border-bottom: 2px solid #cdccd0;
-  display: flex;
-}
-.container .survey .variant .checkbox-option .team .role-container .input-option {
-  border: none;
+  border-left: 2px solid #cdccd0;
   display: flex;
   align-items: center;
-  font-size: 28px;
+}
+.container .survey .variant .checkbox-option .team .role-container .input-option {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.75rem;
   font-weight: 600;
   padding: 15px;
+  cursor: pointer;
+  margin-left: 1rem;
 }
 .container .survey .variant .checkbox-option .team .role-container .input-option .fa-solid {
-  margin-left: 20px;
-  cursor: pointer;
+  margin-left: 1rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+.container .survey .variant .checkbox-option .team .role-container .input-option .fa-solid:hover {
+  background: #e0e0e0;
 }
 .container .survey .variant .checkbox-option .team .role-container .popup-window {
   background-color: white;
@@ -101,27 +104,46 @@
   flex-direction: column;
   border-radius: 10px;
   width: 40%;
-  box-shadow: 0px 4px 8px grey; /* Тінь знизу */
-  margin-top: 8vh;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 32vh;
+  overflow: hidden;
+  z-index: 1;
 }
 .container .survey .variant .checkbox-option .team .role-container .popup-window button {
-  text-align: left;
   background: white;
   border: none;
-  margin: 10px;
   padding: 10px;
+  margin: 10px;
   border-radius: 10px;
+  text-align: left;
+  transition: background-color 0.3s;
 }
 .container .survey .variant .checkbox-option .team .role-container .popup-window button h1 {
   font-weight: 500;
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 .container .survey .variant .checkbox-option .team .role-container .popup-window button p {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #646366;
 }
 .container .survey .variant .checkbox-option .team .role-container .popup-window button:hover {
   background: #cde7ff;
+}
+.container .survey .variant .checkbox-option .team .remove-button {
+  width: 4rem;
+  height: 4.5rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  right: 2rem;
+  border-radius: 1rem;
+  color: #d2d0d0;
+}
+.container .survey .variant .checkbox-option .team .remove-button:hover {
+  background: #e0e0e0;
+  color: black;
+  cursor: pointer;
 }
 .container .survey .variant .btn-add {
   width: 40%;
@@ -132,45 +154,46 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-.container .survey .variant .btn-container .btn-later {
-  position: absolute;
-  bottom: 15vh;
-  right: 78vh;
-  width: 250px;
-  font-size: 26px;
+.container .survey .variant .btn-add:hover {
+  background-color: #e0e0e0;
+}
+.container .survey .variant .button-container {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+.container .survey .variant .button-container .btn-later,
+.container .survey .variant .button-container .btn-invite {
+  font-size: 1.625rem;
   padding: 10px 15px;
-  margin-left: 10px;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.container .survey .variant .button-container .btn-later:hover,
+.container .survey .variant .button-container .btn-invite:hover {
+  background-color: #e6e6e6;
+}
+.container .survey .variant .button-container .btn-later {
   background-color: #dcdcdc;
   color: black;
 }
-.container .survey .variant .btn-container .btn-later:hover {
-  background: none;
-  cursor: pointer;
-}
-.container .survey .variant .btn-container .btn-invite {
-  position: absolute;
-  bottom: 15vh;
-  right: 25vh;
-  width: 200px;
-  font-size: 26px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  border: none;
+.container .survey .variant .button-container .btn-invite {
   background-color: #dad9db;
   color: #88888a;
-}
-.container .survey .variant .btn-container .btn-invite:hover {
-  background: none;
-  cursor: pointer;
 }
 .container .team-photo {
   width: 750px;
   height: 100%;
   background-image: url("../image/second-page-bg.jpeg");
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
 }/*# sourceMappingURL=team.css.map */
