@@ -8,7 +8,7 @@ import Team from './Team';
 import MainPage from './MainPage';
 
 function Survey() {
-  const [currentPage, setCurrentQuestion] = useState(5);
+  const [currentPage, setCurrentQuestion] = useState(1);
 
   const goToFirstQuestion = () => setCurrentQuestion(1);
   const goToSecondQuestion = () => setCurrentQuestion(2);
