@@ -24,9 +24,6 @@
   color: black;
   border-radius: 10px;
   padding: 10px;
-  background: rgba(27, 27, 27, 0.4); /* напівпрозорий білий */
-  backdrop-filter: blur(3px); /* розмиття */
-  -webkit-backdrop-filter: blur(3px); /* Safari */
   .fa-lemon,
   .hello {
     font-size: 22px !important;
@@ -102,6 +99,9 @@ label {
     justify-content: center;
     position: fixed;
     top: -170px;
+    background: rgba(27, 27, 27, 0.4); /* напівпрозорий білий */
+    backdrop-filter: blur(3px); /* розмиття */
+    -webkit-backdrop-filter: blur(3px); /* Safari */
     h1,
     .fa-lemon {
       font-size: 24px !important;

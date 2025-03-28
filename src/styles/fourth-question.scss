@@ -8,6 +8,7 @@
   display: flex;
   height: 100vh;
   overflow: hidden;
+  justify-content: space-between;
 }
 .fourth-main {
   flex: 1;
@@ -68,7 +69,7 @@ label {
   overflow: hidden;
   .fourth-bg {
     max-width: 100%;
-  margin: auto;
+    margin: auto;
     height: 100%;
   }
 }

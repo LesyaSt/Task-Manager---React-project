@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/team.scss";
-
+import backgroundImage from "../image/five-bg.jpeg";
 function Team({ onContinue }) {
   // Масив для зберігання електронних адрес та ролей
   const [emails, setEmails] = useState([{ email: "", role: "Admin" }]);
@@ -61,15 +61,15 @@ function Team({ onContinue }) {
   };
 
   return (
-    <div className="container">
-      <section className="survey">
-        <div className="logo">
+    <div className="container-team">
+      <section className="team-main">
+        <div className="logo-team">
           <i className="fa-solid fa-lemon"></i>
           <h2 className="hello">Lemon Work Management</h2>
         </div>
         <fieldset className="variant">
-          <legend className="legend">Who else is on your team?</legend>
-          <form className="checkbox-option" onSubmit={handleSubmit}>
+          <h2 className="legend-team">Who else is on your team?</h2>
+          <form className="checkbox-option-team" onSubmit={handleSubmit}>
 
             {emails.map((entry, index) => (
               <div key={index} className="team">
@@ -84,7 +84,7 @@ function Team({ onContinue }) {
                   value={entry.email}
                   required
                   className="email-adress"
-                  placeholder="Add E-mail address"
+                  placeholder="Add E-mail"
                 />
 
                 {/* Вибір ролі */}
@@ -130,7 +130,8 @@ function Team({ onContinue }) {
             ))}
 
             <button type="button" className="btn-add" onClick={addEmailField}>
-              <i className="fa-solid fa-plus"></i> Add another address
+              <i className="fa-solid fa-plus"></i> 
+              <h3>Add another address</h3>
             </button>
           </form>
 
@@ -146,8 +147,8 @@ function Team({ onContinue }) {
         </fieldset>
       </section>
 
-      <section>
-        <div className="team-photo"></div>
+      <section className="bg-photo-team">
+      <img className="team-bg" src={backgroundImage} alt="background" />
       </section>
     </div>
   );

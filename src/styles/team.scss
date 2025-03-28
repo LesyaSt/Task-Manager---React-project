@@ -3,215 +3,359 @@
   padding: 0;
   margin: 0;
 }
-
-.container {
+.container-team {
   display: flex;
-  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: space-between;
+}
 
-  .survey {
-    background-color: #f3f3f3;
-    position: relative;
-    width: 100%;
-    height: 900px;
+.team-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 40px;
+  justify-content: center;
+  margin-left: 50px;
+}
+.logo-team {
+  display: flex;
+  margin-bottom: 50px;
+  color: black;
+  .fa-lemon,
+  .hello {
+    font-size: 32px;
+    margin-right: 10px;
+  }
+}
+.legend-team {
+  display: block;
+  margin: 50px 0 15px 0;
+  font-size: 24px;
+  color: #767678;
+  font-weight: bold;
+}
+.variant {
+  border: none;
+  max-width: 800px;
+}
+
+.checkbox-option-team {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+.team {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid #cdccd0;
+  position: relative;
+}
+
+.email-adress {
+  margin-left: 15px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  width: 100%;
+  &::placeholder {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.role-container {
+  height: 8vh;
+  border-left: 2px solid #cdccd0;
+  display: flex;
+  align-items: center;
+
+  .input-option {
     display: flex;
-    flex-direction: column;
-    padding: 100px 0 0 150px;
-
-    .logo {
+    align-items: center;
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+    padding: 15px;
+    cursor: pointer;
+    color: #88888a;
+    .fa-solid {
+      margin-left: 1rem;
       display: flex;
       align-items: center;
-      width: 80%;
-
-      .fa-lemon {
-        font-size: 24px;
-        margin-right: 15px;
+      justify-content: center;
+      &:hover {
+        color: black;
       }
     }
+  }
+}
 
-    .variant {
-      width: 90%;
-      margin-top: 10vh;
-      border: none;
-      .legend {
-        font-size: 2.25rem; // краще використовувати rem для адаптивності
-        font-weight: 700;
-        margin-bottom: 50px;
-      }
+.popup-window {
+  background-color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 40%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 32vh;
+  overflow: hidden;
+  z-index: 1;
+  button {
+    background: white;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: left;
+    transition: background-color 0.3s;
 
-      .checkbox-option {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 2vh;
+    h1 {
+      font-weight: 500;
+      font-size: 28px;
+      color: black;
+    }
 
-        .team {
-          display: flex;
-          align-items: center;
-          // justify-content: space-between;
-          width: 100%;
-          border-radius: 1vh;
-          margin: 1rem 0 0 0;
-          padding: 0;
-          border: 2px solid #cdccd0;
-            .email-adress {
-              margin-left: 15px;
-              font-size: 1.5rem;
-              background: none;
-              border: none;
-              width: 100%;
-              &::placeholder {
-                font-size: 1.75rem;
-                font-weight: 500;
-              }
-              &:focus {
-                outline: none;
-              }
-            }
-          
+    p {
+      font-size: 1.5rem;
+      color: #646366;
+    }
 
-          .role-container {
-            height: 8vh;
-            border-left: 2px solid #cdccd0;
-            display: flex;
-            align-items: center;
+    &:hover {
+      background: #cde7ff;
+    }
+  }
+}
 
-            .input-option {
-              display: flex;
-              align-items: center;
-              text-align: center;
-              font-size: 1.75rem;
-              font-weight: 600;
-              padding: 15px;
-              cursor: pointer;
-              margin-left: 1rem;
-              
-              .fa-solid {
-                margin-left: 1rem;
-                width: 3rem;
-                height: 3rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 1rem;
-                &:hover {
-                  background: #e0e0e0;
-                }
-              }
-            }
+.remove-button {
+  width: 25px;
+  height: 25px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  position: absolute;
+  right: -50px;
+  border-radius: 5px;
+  color: #d2d0d0;
+  &:hover {
+    color: black;
+    cursor: pointer;
+  }
+}
+.btn-add {
+  width: 50%;
+  height: 7vh;
+  border: none;
+  border-radius: 10px;
+  background: rgb(216, 216, 216);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 
-            .popup-window {
-              background-color: white;
-              position: absolute;
-              display: flex;
-              flex-direction: column;
-              border-radius: 10px;
-              width: 40%;
-              box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-              margin-top: 32vh;
-              overflow: hidden;
-              z-index: 1;
-              button {
-                background: white;
-                border: none;
-                padding: 10px;
-                margin: 10px;
-                border-radius: 10px;
-                text-align: left;
-                transition: background-color 0.3s;
+  &:hover {
+    background-color: #0076f1;
+    color: white;
+  }
+}
 
-                h1 {
-                  font-weight: 500;
-                  font-size: 1.75rem;
-                }
+.button-container {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 5rem;
 
-                p {
-                  font-size: 1.5rem;
-                  color: #646366;
-                }
+  .btn-later,
+  .btn-invite {
+    font-size: 1.625rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 
-                &:hover {
-                  background: #cde7ff;
-                }
-              }
-            }
-          }
-          .remove-button {
-            width: 4rem;
-            height: 4.5rem;
-            background: none;
-            border: none;
-            font-size: 2rem;
-            position: absolute;
-            right: 2rem;
-            border-radius: 1rem;
-            color: #d2d0d0;
-            &:hover {
-              background: #e0e0e0;
-              color: black;
-              cursor: pointer;
-            }
-          }
-        }
-      }
+    &:hover {
+      background-color: #0076f1;
+      color: white;
+    }
+  }
 
-      .btn-add {
-        width: 40%;
-        height: 7vh;
-        border: none;
-        border-radius: 10px;
-        background: rgb(216, 216, 216);
+  .btn-later {
+    background: none;
+    color: black;
+  }
+
+  .btn-invite {
+    background-color: #dad9db;
+    color: #88888a;
+  }
+}
+
+.bg-photo-team {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  .team-bg {
+    max-width: 100%;
+    margin: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .container-fourth {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo-team {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 30px;
+    z-index: 1001;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(27, 27, 27, 0.4); /* напівпрозорий білий */
+    backdrop-filter: blur(3px); /* розмиття */
+    -webkit-backdrop-filter: blur(3px); /* Safari */
+    .hello {
+      font-size: 24px;
+    }
+    .fa-lemon {
+      font-size: 24px !important;
+    }
+  }
+ 
+  .bg-photo-team {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1000;
+    position: absolute;
+  }
+  .bg-photo-team {
+    .team-bg {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+  .team-main {
+    position: relative;
+    z-index: 1000;
+    margin: 0;
+    align-items: center;
+  }
+
+  .role-container {
+    border-left: 2px solid #cdccd0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 120px;
+
+    .input-option {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 15px;
+      cursor: pointer;
+      color: white;
+      .fa-solid {
+        margin-left: 1rem;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
-        font-size: 1.5rem;
-        margin-top: 15px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-
+        justify-content: center;
         &:hover {
-          background-color: #e0e0e0;
-        }
-      }
-
-      .button-container {
-        position: relative;
-        display: flex;
-        gap: 1rem;
-        justify-content: space-between;
-        margin-top: 5rem;
-
-        .btn-later,
-        .btn-invite {
-          font-size: 1.625rem;
-          padding: 10px 15px;
-          border-radius: 5px;
-          border: none;
-          cursor: pointer;
-          transition: background-color 0.3s;
-
-          &:hover {
-            background-color: #e6e6e6;
-          }
-        }
-
-        .btn-later {
-          background-color: #dcdcdc;
           color: black;
-        }
-
-        .btn-invite {
-          background-color: #dad9db;
-          color: #88888a;
         }
       }
     }
   }
 
-  .team-photo {
-    width: 750px;
-    height: 100%;
-    background-image: url("../image/second-page-bg.jpeg");
-    background-size: cover;
-    background-position: center;
+  .variant {
+    background: rgba(27, 27, 27, 0.4); /* напівпрозорий білий */
+    backdrop-filter: blur(3px); /* розмиття */
+    -webkit-backdrop-filter: blur(3px); /* Safari */
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .legend-team {
+      font-size: 28px;
+      text-align: center;
+      margin: 5px;
+      padding: 0 0 45px 0;
+      color: white;
+    }
+  }
+  .team {
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .email-adress {
+    font-size: 18px;
+    &::placeholder{
+      color: white;
+    }
+  }
+
+  .checkbox-option-team {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .remove-button {
+    display: none;
+  }
+
+  .btn-add {
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background: #0076f1;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+    h3 {
+      font-size: 24px;
+    }
+    &:hover {
+      background-color: #0076f1;
+      color: white;
+    }
+  }
+
+  .button-container {
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    .btn-later,
+    .btn-invite {
+      font-size: 18px;
+      color: white;
+      background: #0076f1;
+    }
   }
 }
